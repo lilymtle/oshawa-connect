@@ -1,6 +1,7 @@
 import "./Footer.scss"
 
-export default function Footer(): JSX.Element {
+
+export default function Footer() {
     return (
         <footer>
             Footer
