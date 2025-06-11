@@ -1,5 +1,26 @@
+@use "./partials/fonts.scss" as *;
+@use "./partials/variables.scss" as *;
+@use "./partials/mixins.scss" as *;
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: #F8FAFC;
+    font-family: "Raleway", sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
 }
