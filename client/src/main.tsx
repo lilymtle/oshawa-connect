@@ -5,14 +5,19 @@ import "./styles/global.scss"
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Footer from './components/Footer/Footer'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Header />
-    <Hero />
+    <Router>
+      <Header />
+      <Hero />
       <main>
-        <HomePage />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
       </main>
-    <Footer />
+      <Footer />
+    </Router>
   </StrictMode>,
 )
