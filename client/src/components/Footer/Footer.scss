@@ -1,2 +1,42 @@
+@use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
+
+.footer {
+    background-color: $footer-background;
+    height: 100%;
+    padding: 1rem;
+
+    &__nav {
+        width: 100%;
+        @include flexbox(column, wrap);
+        align-items: center;
+        gap: 2rem;
+
+        &-wrapper {
+            width: 100%;
+            @include flexbox(column, wrap);
+            align-items: center;
+            gap: 1rem;
+        }
+
+        &-label {
+            font-family: "Playfair Display", sans-serif;
+            font-size: 1rem;
+            color: $champagne-gold;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.25rem;
+        }
+
+        &-list {
+            @include flexbox(column, wrap);
+            align-items: center;
+            gap: 0.5rem;
+
+            &-item {
+                color: $footer-link;
+            }
+        }
+    }
+}
