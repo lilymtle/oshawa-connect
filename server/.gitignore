@@ -1,0 +1,20 @@
+# python
+__pycache__/
+*.py[cod]
+*.log
+
+# virtual environment
+venv/
+
+# environment variable
+.env
+
+# pyInstaller
+*.spec
+
+# system
+.DS_Store
+
+# vsode/ide settings
+.vscode/
+.idea/
