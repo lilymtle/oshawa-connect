@@ -1,2 +1,34 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
+
+.home {
+    padding: 1rem;
+
+    &__subheading {
+        text-align: center;
+    }
+
+    &__discover {
+        @include flexbox(column, wrap);
+        gap: 1rem;
+
+        &-list {
+            @include flexbox(column, wrap);
+            gap: 1rem;
+
+            &-item {
+                @include flexbox(column, wrap);
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+
+        &-label {
+            font-weight: 600;
+        }
+
+        &-text {
+            text-align: center;
+        }
+    }
+}
