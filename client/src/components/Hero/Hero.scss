@@ -1,2 +1,37 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
+
+.hero {
+    width: auto;
+    height: 100vw;
+    overflow: hidden;
+    position: relative;
+
+    &__video {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); 
+    }
+
+    &__content {
+        color: white;
+        @include flexbox(column, wrap);
+        gap: 0.5rem;
+        padding: 1rem;
+        position: absolute;
+        top: 9rem;
+        left: 0;
+    }
+
+    &__accent {
+        color: $champagne-gold;
+    }
+}
