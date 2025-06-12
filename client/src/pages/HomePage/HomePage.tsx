@@ -12,7 +12,7 @@ export default function HomePage() {
 
         <div className="home__discover-wrapper">
           <ul className="home__discover-list">
-            <li className="home__discover-list-item">
+            <li className="home__discover-list-item card">
               < EventIcon />
 
               <p className="home__discover-label">
@@ -24,7 +24,7 @@ export default function HomePage() {
               </p>
             </li>
 
-            <li className="home__discover-list-item">
+            <li className="home__discover-list-item card">
               <LocalDiningIcon />
 
               <p className="home__discover-label">
@@ -36,7 +36,7 @@ export default function HomePage() {
               </p>
             </li>
 
-            <li className="home__discover-list-item">
+            <li className="home__discover-list-item card">
               <PeopleIcon />
 
               <p className="home__discover-label">
