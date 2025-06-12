@@ -12,6 +12,17 @@
     }
 }
 
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
 .header {
     width: 100%;
     @include flexbox(row, nowrap);
@@ -22,14 +33,20 @@
 
     &__mobile-nav {
         width: 100%;
-        height: auto;
+        height: 100vh;
+        @include flexbox(column, wrap);
+        gap: 10rem;
         background-color: $marigold;
         color: white;
         padding: 1rem;
         position: absolute;
         top: 0;
         left: 0;
-        animation: slideDown 0.5s ease-in-out;
+
+        &-close {
+            @include flexbox(row, wrap);
+            justify-content: flex-end;
+        }
 
         &-list {
             @include flexbox(column, wrap);
@@ -39,7 +56,21 @@
     }
 }
 
+
 .logo {
     width: auto;
     height: 1.5625rem;
+}
+
+/* mobile menu animation */
+.header__mobile-nav.open {
+    animation: slideDown 0.5s ease-in-out;
+}
+
+.header__mobile-nav.close {
+    animation: slideUp 0.5s ease-in-out forwards;
+}
+
+.header__mobile-nav.hidden {
+    display: none;
 }
