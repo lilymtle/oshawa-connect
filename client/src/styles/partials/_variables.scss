@@ -5,10 +5,40 @@ $off-white: #F5F5F5;
 $champagne-gold: #E8C65B;
 $marigold: #DDA853;
 $white: #FFFFFF;
+$dark-grey: #2C2C2C;
+$medium-grey: #404040;
 
 /* --- descriptive variables --*/
 
-// footer
+/* button */
+$buttons: (
+    primary: (
+        bg: $charcoal-blue, 
+        border: $charcoal-blue, 
+        label: $off-white, 
+        hover-bg: $dark-blue,
+        hover-border: $dark-blue,
+        hover-label: $off-white
+    ),
+    secondary: (
+        bg: $dark-grey, 
+        border: $dark-grey, 
+        label: $off-white, 
+        hover-bg: $medium-grey,
+        hover-border: $medium-grey,
+        hover-label: $off-white
+    ),
+    tertiary: (
+        bg: $off-white, 
+        border: $off-white,
+        label: $dark-grey, 
+        hover-bg: $champagne-gold,
+        hover-border: $champagne-gold,
+        hover-label: $dark-grey
+    )
+);
+
+/* footer */
 $footer-background: $charcoal-blue;
 $footer-navigation-label: $champagne-gold;
 $footer-link: $white;
