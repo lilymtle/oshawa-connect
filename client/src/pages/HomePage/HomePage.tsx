@@ -45,6 +45,7 @@ export default function HomePage() {
 
           <Button
             className="home__learn-more-btn"
+            variant="secondary"
             label="Learn More"
           />
         </div>
