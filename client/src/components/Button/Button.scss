@@ -1,2 +1,53 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
+
+button {
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: .5rem;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+
+    &:hover {
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+    }
+
+    &.primary {
+        background-color: map-get($buttons, primary, bg);
+        color: map-get($buttons, primary, label);
+        border: map-get($buttons, primary, border);
+
+        &:hover {
+            background-color: map-get($buttons, primary, hover-bg);
+            color: map-get($buttons, primary, hover-label);
+            border: map-get($buttons, primary, hover-border);
+        }
+    }
+
+    &.secondary {
+        background-color: map-get($buttons, secondary, bg);
+        color: map-get($buttons, secondary, label);
+        border: map-get($buttons, secondary, border);
+
+        &:hover {
+            background-color: map-get($buttons, secondary, hover-bg);
+            color: map-get($buttons, secondary, hover-label);
+            border: map-get($buttons, secondary, hover-border);
+        }
+    }
+
+    &.tertiary {
+        background-color: map-get($buttons, tertiary, bg);
+        color: map-get($buttons, tertiary, label);
+        border: map-get($buttons, tertiary, border);
+
+        &:hover {
+            background-color: map-get($buttons, tertiary, hover-bg);
+            color: map-get($buttons, tertiary, hover-label);
+            border: map-get($buttons, tertiary, hover-border);
+        }
+    }
+}
