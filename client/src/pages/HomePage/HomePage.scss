@@ -40,6 +40,11 @@
         font-size: 20px;
         padding: 2rem;
 
+        &-wrapper {
+            @include flexbox(column, wrap);
+            gap: 1rem;
+        }
+
         &-text {
             &--gold {
                 color: $champagne-gold;
