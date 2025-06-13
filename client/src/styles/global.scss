@@ -13,8 +13,8 @@ html {
 }
 
 body {
-    background-color: #F8FAFC;
-    font-family: "Raleway", sans-serif;
+    background-color: $ghost-white;
+    font-family: $primary-font;
 }
 
 li {
@@ -22,15 +22,15 @@ li {
 }
 
 h1 {
-    font-family: "Playfair Display", sans-serif;
+    font-family: $primary-font;
     font-size: 34px;
     letter-spacing: 0.1rem;
 }
 
 h2 {
-    font-family: "Playfair Display", sans-serif;
+    font-family: $primary-font;
     font-size: 24px;
-    color: $charcoal-blue;
+    color: map-get($heading-colors, h2);
     letter-spacing: 0.1rem;
 }
 
