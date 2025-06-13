@@ -1,14 +1,24 @@
-/* --- color variables --- */
+@use "./fonts.scss" as *;
+
+/*--- color variables --- */
 $dark-blue: #27548A;
 $charcoal-blue: #183B4E;
-$off-white: #F5F5F5;
 $champagne-gold: #E8C65B;
 $marigold: #DDA853;
 $white: #FFFFFF;
+$ghost-white: #F8FAFC;
+$off-white: #F5F5F5;
 $dark-grey: #2C2C2C;
 $medium-grey: #404040;
 
 /* --- descriptive variables --*/
+
+/* typography */
+$primary-font: "Playfair Display", sans-serif;
+$secondary-font: "Raleway", sans-serif;
+$heading-colors: (
+    h2: $charcoal-blue
+);
 
 /* button */
 $buttons: (
@@ -39,6 +49,10 @@ $buttons: (
 );
 
 /* footer */
-$footer-background: $charcoal-blue;
-$footer-navigation-label: $champagne-gold;
-$footer-link: $white;
+$footer: (
+    bg: ($charcoal-blue),
+    label-font: $primary-font,
+    label-color: $champagne-gold,
+    link-font: $secondary-font,
+    link-color: $off-white
+)
