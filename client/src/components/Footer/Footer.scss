@@ -3,7 +3,7 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .footer {
-    background-color: $footer-background;
+    background-color: map-get($footer, bg);
     height: 100%;
     padding: 1rem;
 
@@ -21,9 +21,9 @@
         }
 
         &-label {
-            font-family: "Playfair Display", sans-serif;
+            font-family: map-get($footer, label-font);
             font-size: 1rem;
-            color: $champagne-gold;
+            color: map-get($footer, label-color);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.25rem;
@@ -35,7 +35,8 @@
             gap: 0.5rem;
 
             &-item {
-                color: $footer-link;
+                font-family: map-get($footer, link-font);
+                color: map-get($footer, link-color);
             }
         }
     }
