@@ -2,6 +2,7 @@ import "./HomePage.scss"
 
 import { motion } from "motion/react";
 import { discoverCards } from "../../data/discoverData";
+import Button from "../../components/Button/Button";
 
 export default function HomePage() {
   return (
@@ -33,6 +34,29 @@ export default function HomePage() {
             ))}
           </ul>
         </div>
+      </section>
+      
+      <section className="home__learn-more">
+        <div className="home__learn-more-wrapper">
+          <p className="home__learn-more-text">
+            <span className="home__learn-more-text--gold">Oshawa Connect</span> is more than just a directory—it’s a way to engage, support,
+            and discover. <span className="home__learn-more-text--gold">Because community</span> isn’t just where you live—it’s how you connect, grow, and belong.
+          </p>
+
+          <Button
+            className="home__learn-more-btn"
+            variant="secondary"
+            label="Learn More"
+          />
+        </div>
+      </section>
+
+      <section className="home__community-spotlight">
+        <h2 className="home__subheading">Community Spotlight</h2>
+      </section>
+
+      <section className="home__upcoming-events">
+        <h2 className="home__subheading">Upcoming Events</h2>
       </section>
     </section>
   )

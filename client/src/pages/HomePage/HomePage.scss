@@ -2,15 +2,15 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .home {
-    padding: 1rem;
-
     &__subheading {
         text-align: center;
     }
 
+    /* --- discover oshawa cards --- */
     &__discover {
         @include flexbox(column, wrap);
         gap: 1rem;
+        padding: 1rem;
 
         &-list {
             @include flexbox(column, wrap);
@@ -30,6 +30,36 @@
         &-text {
             text-align: center;
         }
+    }
+
+    /* --- learn more --- */
+    &__learn-more {
+        background-color: $charcoal-blue;
+        color: white;
+        font-family: "Playfair Display", sans-serif;
+        font-size: 20px;
+        padding: 2rem;
+
+        &-wrapper {
+            @include flexbox(column, wrap);
+            gap: 1rem;
+        }
+
+        &-text {
+            &--gold {
+                color: $champagne-gold;
+            }
+        }
+    }
+
+    /* --- community spotlight --- */
+    &__community-spotlight {
+        padding: 1rem;
+    }
+
+    /* --- upcoming events --- */
+    &__upcoming-events {
+        padding: 1rem;
     }
 }
 
