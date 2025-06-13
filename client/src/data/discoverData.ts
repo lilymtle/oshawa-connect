@@ -16,18 +16,18 @@ export const discoverCards: DiscoverCardProps[] = [
         id: 1,
         icon: EventIcon,
     title: "Events",
-        description: "Discover local events happening in Oshawa.",
+        description: "Discover exciting local events, festivals, and activities happening in Oshawa.",
     },
     {
         id: 2,
         icon: LocalDiningIcon,
         title: "Local Businesses",
-        description: "Find and support local businesses.",
+        description: "Connect with and support Oshawa’s thriving small businesses and entrepreneurs.",
     },
     {
         id: 3,
         icon: PeopleIcon,
         title: "Community Resources",
-        description: "Access valuable community resources and support.",
+        description: "Access essential services, programs, and support to strengthen our community.",
     },
 ];
