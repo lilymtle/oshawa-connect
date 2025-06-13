@@ -50,6 +50,14 @@ export default function HomePage() {
           />
         </div>
       </section>
+
+      <section className="home__community-spotlight">
+        <h2 className="home__subheading">Community Spotlight</h2>
+      </section>
+
+      <section className="home__upcoming-events">
+        <h2 className="home__subheading">Upcoming Events</h2>
+      </section>
     </section>
   )
 }
