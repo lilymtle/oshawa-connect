@@ -32,7 +32,7 @@
         }
     }
 
-    /* -- learn more -- */
+    /* --- learn more --- */
     &__learn-more {
         background-color: $charcoal-blue;
         color: white;
@@ -50,6 +50,16 @@
                 color: $champagne-gold;
             }
         }
+    }
+
+    /* --- community spotlight --- */
+    &__community-spotlight {
+        padding: 1rem;
+    }
+
+    /* --- upcoming events --- */
+    &__upcoming-events {
+        padding: 1rem;
     }
 }
 
