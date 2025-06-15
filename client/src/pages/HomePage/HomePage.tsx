@@ -5,6 +5,7 @@ import { discoverCards } from "../../data/discoverData";
 import Button from "../../components/Button/Button";
 import Card from "../../components/Card/Card";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import StarRating from "../../components/StarRating/StarRating";
 
 export default function HomePage() {
   return (
@@ -64,7 +65,7 @@ export default function HomePage() {
               </p>
 
               <section className="community-spotlight__rating">
-                Stars here
+                <StarRating rating={4.6}/>
               </section>
 
               <section className="community-spotlight__meta">
