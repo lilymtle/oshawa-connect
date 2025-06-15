@@ -96,7 +96,16 @@ export default function HomePage() {
           <ul className="upcoming-events__list">
             {upcomingEvents.map((event, index) => (
               <li key={index} className="upcoming-events__item">
-                <Card className="upcoming-events__card" style={{ backgroundImage: `url(${event.image})`}}>
+                <Card 
+                  className="upcoming-events__card" 
+                  style={{ 
+                    backgroundImage: `url(${event.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center"
+                  }}
+                >
+                  <div className="upcoming-events__overlay"></div>
+                  
                   <div className="upcoming-events__details">
                     <p className="upcoming-events__date">{event.date}</p>
                     <p className="upcoming-events__name">{event.name}</p>
