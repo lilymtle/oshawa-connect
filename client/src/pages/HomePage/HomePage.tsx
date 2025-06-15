@@ -70,7 +70,14 @@ export default function HomePage() {
               <section className="community-spotlight__meta">
                 <ul className="community-spotlight__meta-list">
                   <li className="community-spotlight__category">Asian</li>
-                  <li className="community-spotlight__distance">1.1 km</li>
+                  <span className="community-spotlight__distance-wrapper">
+                    <img 
+                      className="community-spotlight__distance-icon"
+                      src="/assets/icons/map-pin.svg"
+                      alt="Outlined Map Pin Icon"
+                    />
+                    <li className="community-spotlight__distance">1.1 km</li>
+                  </span>
                   <li className="community-spotlight__pricing">$$</li>
                 </ul>
 

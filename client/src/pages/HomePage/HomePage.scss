@@ -74,8 +74,14 @@
 
     &__details {
         background: white;
-        border-radius: .5rem;
+        @include flexbox(column, wrap);
+        gap: 0.5rem;
+        border-radius: 0.5rem;
         padding: 1rem;
+    }
+
+    &__name {
+        font-weight: 600;
     }
 
     &__meta {
@@ -87,6 +93,18 @@
             @include flexbox(row, wrap);
             justify-content: space-between;
             align-items: center;
+        }
+    }
+    
+    &__distance {
+        &-wrapper {
+            @include flexbox(row, wrap);
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        &-icon {
+            width: 1.1875rem;
         }
     }
 }
