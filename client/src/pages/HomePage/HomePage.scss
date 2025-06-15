@@ -32,7 +32,7 @@
         }
     }
 
-    /* --- learn more --- */
+    /* --- learn more section --- */
     &__learn-more {
         background-color: $charcoal-blue;
         color: $white;
@@ -52,17 +52,20 @@
         }
     }
 
-    /* --- community spotlight --- */
+    /* --- community spotlight section --- */
     &__community-spotlight {
+        @include flexbox(column, wrap);
+        gap: 1rem;
         padding: 1rem;
     }
 
-    /* --- upcoming events --- */
+    /* --- upcoming events section --- */
     &__upcoming-events {
         padding: 1rem;
     }
 }
 
+/* --- community spotlight card --*/
 .community-spotlight {
     &__card {
         background-image: url("../../../assets/images/community-spotlight-image.jpeg");
