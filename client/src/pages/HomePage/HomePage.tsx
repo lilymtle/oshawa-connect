@@ -6,6 +6,7 @@ import Button from "../../components/Button/Button";
 import Card from "../../components/Card/Card";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import StarRating from "../../components/StarRating/StarRating";
+import { upcomingEvents } from "../../data/upcomingEvents";
 
 export default function HomePage() {
   return (
@@ -21,9 +22,9 @@ export default function HomePage() {
                 className="home__discover-list-item card"
                 animate={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }} 
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: "easeOut", delay: index * 0.3 }}
-                >
+              >
                 <card.icon />
 
                 <p className="home__discover-label">
@@ -38,7 +39,7 @@ export default function HomePage() {
           </ul>
         </div>
       </section>
-      
+
       <section className="home__learn-more">
         <div className="home__learn-more-wrapper">
           <p className="home__learn-more-text">
@@ -59,37 +60,53 @@ export default function HomePage() {
 
         <Card
           className="community-spotlight__card">
-            <div className="community-spotlight__details">
-              <p className="community-spotlight__name">
-                Ayothaya Thai Kitchen
-              </p>
+          <div className="community-spotlight__details">
+            <p className="community-spotlight__name">
+              Ayothaya Thai Kitchen
+            </p>
 
-              <section className="community-spotlight__rating">
-                <StarRating rating={4.6}/>
-              </section>
+            <section className="community-spotlight__rating">
+              <StarRating rating={4.6} />
+            </section>
 
-              <section className="community-spotlight__meta">
-                <ul className="community-spotlight__meta-list">
-                  <li className="community-spotlight__category">Asian</li>
-                  <span className="community-spotlight__distance-wrapper">
-                    <img 
-                      className="community-spotlight__distance-icon"
-                      src="/assets/icons/map-pin.svg"
-                      alt="Outlined Map Pin Icon"
-                    />
-                    <li className="community-spotlight__distance">1.1 km</li>
-                  </span>
-                  <li className="community-spotlight__pricing">$$</li>
-                </ul>
+            <section className="community-spotlight__meta">
+              <ul className="community-spotlight__meta-list">
+                <li className="community-spotlight__category">Asian</li>
+                <span className="community-spotlight__distance-wrapper">
+                  <img
+                    className="community-spotlight__distance-icon"
+                    src="/assets/icons/map-pin.svg"
+                    alt="Outlined Map Pin Icon"
+                  />
+                  <li className="community-spotlight__distance">1.1 km</li>
+                </span>
+                <li className="community-spotlight__pricing">$$</li>
+              </ul>
 
-                <ArrowForwardIcon />
-              </section>
-            </div>
+              <ArrowForwardIcon />
+            </section>
+          </div>
         </Card>
       </section>
 
       <section className="home__upcoming-events">
         <h2 className="home__subheading">Upcoming Events</h2>
+
+        <section className="upcoming-events__carousel">
+          <ul className="upcoming-events__list">
+            {upcomingEvents.map((event, index) => (
+              <li key={index} className="upcoming-events__item">
+                <Card className="upcoming-events__card" style={{ backgroundImage: `url(${event.image})`}}>
+                  <div className="upcoming-events__details">
+                    <p className="upcoming-events__date">{event.date}</p>
+                    <p className="upcoming-events__name">{event.name}</p>
+                  </div>
+                </Card>
+              </li>
+            ))}
+          </ul>
+
+        </section>
       </section>
     </section>
   )
