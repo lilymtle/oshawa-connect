@@ -63,9 +63,30 @@
     }
 }
 
-.card {
-    border: .0625rem solid #F0F0F0;
-    border-radius: 1.25rem;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+.community-spotlight {
+    &__card {
+        background-image: url("../../../assets/images/community-spotlight-image.jpeg");
+        background-size: cover;
+        height: 317px;
+        @include flexbox(column, wrap);
+        justify-content: flex-end;
+    }
+
+    &__details {
+        background: white;
+        border-radius: .5rem;
+        padding: 1rem;
+    }
+
+    &__meta {
+        @include flexbox(row, wrap);
+        justify-content: space-between;
+
+        &-list {
+            width: 70%;
+            @include flexbox(row, wrap);
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
 }
