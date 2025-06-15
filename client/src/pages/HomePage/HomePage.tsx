@@ -3,6 +3,8 @@ import "./HomePage.scss"
 import { motion } from "motion/react";
 import { discoverCards } from "../../data/discoverData";
 import Button from "../../components/Button/Button";
+import Card from "../../components/Card/Card";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function HomePage() {
   return (
@@ -53,6 +55,29 @@ export default function HomePage() {
 
       <section className="home__community-spotlight">
         <h2 className="home__subheading">Community Spotlight</h2>
+
+        <Card
+          className="community-spotlight__card">
+            <div className="community-spotlight__details">
+              <p className="community-spotlight__name">
+                Ayothaya Thai Kitchen
+              </p>
+
+              <section className="community-spotlight__rating">
+                Stars here
+              </section>
+
+              <section className="community-spotlight__meta">
+                <ul className="community-spotlight__meta-list">
+                  <li className="community-spotlight__category">Asian</li>
+                  <li className="community-spotlight__distance">1.1 km</li>
+                  <li className="community-spotlight__pricing">$$</li>
+                </ul>
+
+                <ArrowForwardIcon />
+              </section>
+            </div>
+        </Card>
       </section>
 
       <section className="home__upcoming-events">
