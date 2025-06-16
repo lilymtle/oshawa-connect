@@ -17,16 +17,16 @@ export default function Carousel({ className, children, dates }: CarouselProps) 
         const track = carouselRef.current;
 
         if (track) {
-        const card = track.querySelector('.carousel__card') as HTMLElement;
-        const wrapper = track.parentElement as HTMLElement;
+            const card = track.querySelector('.carousel__card') as HTMLElement;
+            const wrapper = track.parentElement as HTMLElement;
 
-        if (card && wrapper) {
-            const cardWidth = card.offsetWidth + 16;
-            const wrapperWidth = wrapper.offsetWidth;
-            const offset = (cardWidth * i) - (wrapperWidth / 2) + (cardWidth / 2);
+            if (card && wrapper) {
+                const cardWidth = card.offsetWidth + 16;
+                const wrapperWidth = wrapper.offsetWidth;
+                const offset = (cardWidth * i) - (wrapperWidth / 2) + (cardWidth / 2);
 
-            track.style.transform = `translateX(-${Math.max(offset, 0)}px)`;
-        }
+                track.style.transform = `translateX(-${Math.max(offset, 0)}px)`;
+            }
         }
     };
 
@@ -34,8 +34,23 @@ export default function Carousel({ className, children, dates }: CarouselProps) 
         scrollToIndex(index);
     }, [index]);
 
+    const handleKey = (event: React.KeyboardEvent<HTMLDivElement>) => {
+        if (event.key === "ArrowLeft") {
+            setIndex((prev) => (prev - 1 + total) % total);
+        } else if (event.key === "ArrowRight") {
+            setIndex((prev) => (prev + 1) % total);
+        }
+    };
+
+
     return (
-        <div className={`carousel ${className}`}>
+        <div
+            className={`carousel ${className}`}
+            tabIndex={0}
+            onKeyDown={handleKey}
+            aria-label="Event carousel"
+            role="region"
+        >
 
             <div className="carousel__track-wrapper">
                 <ul className="carousel__track" ref={carouselRef}>
@@ -47,16 +62,46 @@ export default function Carousel({ className, children, dates }: CarouselProps) 
                 </ul>
             </div>
 
-            <div className="carousel__labels">
-                {dates.map((date, i) => (
-                    <span
-                        key={i}
-                        className={`carousel__label ${i === index ? "active" : ""}`}
-                        onClick={() => setIndex(i)}
-                    >
-                        {date}
-                    </span>
-                ))}
+            <div className="carousel__controls">
+                <button
+                    className="carousel__arrow carousel__arrow--left"
+                    onClick={() => setIndex((prev) => (prev - 1 + total) % total)}
+                    aria-label="Previous Date"
+                >
+                    <img
+                        className="carousel__arrow-icon"
+                        src="/assets/icons/arrow-left.svg" alt="Left arrow" 
+                    />
+                </button>
+
+                <div className="carousel__labels">
+                    {dates.map((date, i) => (
+                        <span
+                            key={i}
+                            role="button"
+                            tabIndex={0}
+                            className={`carousel__label ${i === index ? "active" : ""}`}
+                            onClick={() => setIndex(i)}
+                            onKeyDown={(event) => {
+                                if (event.key === "Enter" || event.key === " ") setIndex(i);
+                            }}
+                            aria-current={i === index}
+                            aria-label={`View event for ${date}`}
+                        >
+                            {date}
+                        </span>
+                    ))}
+                </div>
+
+                <button
+                    className="carousel__arrow carousel__arrow--right"
+                    onClick={() => setIndex((prev) => (prev + 1) * total)}
+                    aria-label="Next date"
+                >
+                    <img
+                        src="/assets/icons/arrow-right.svg" alt="Right arrow"
+                    />
+                </button>
             </div>
         </div>
     );
