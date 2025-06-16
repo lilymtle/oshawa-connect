@@ -7,6 +7,7 @@ import Card from "../../components/Card/Card";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import StarRating from "../../components/StarRating/StarRating";
 import { upcomingEvents } from "../../data/upcomingEvents";
+import Carousel from "../../components/Carousel/Carousel";
 
 export default function HomePage() {
   return (
@@ -91,21 +92,19 @@ export default function HomePage() {
 
       <section className="home__upcoming-events">
         <h2 className="home__subheading">Upcoming Events</h2>
-
-        <section className="upcoming-events__carousel">
-          <ul className="upcoming-events__list">
-            {upcomingEvents.map((event, index) => (
-              <li key={index} className="upcoming-events__item">
-                <Card 
-                  className="upcoming-events__card" 
-                  style={{ 
+        <Carousel className="upcoming-events__carousel">
+            {upcomingEvents.map((event) => (
+              <li key={event.id} className="upcoming-events__item">
+                <Card
+                  className="upcoming-events__card"
+                  style={{
                     backgroundImage: `url(${event.image})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center"
                   }}
                 >
                   <div className="upcoming-events__overlay"></div>
-                  
+
                   <div className="upcoming-events__details">
                     <p className="upcoming-events__date">{event.date}</p>
                     <p className="upcoming-events__name">{event.name}</p>
@@ -113,8 +112,7 @@ export default function HomePage() {
                 </Card>
               </li>
             ))}
-          </ul>
-        </section>
+        </Carousel>
       </section>
     </section>
   )
