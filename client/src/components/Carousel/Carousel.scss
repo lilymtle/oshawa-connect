@@ -4,6 +4,8 @@
 .carousel {
   position: relative;
   width: 100%;
+  @include flexbox(column, wrap);
+  gap: 1rem;
   overflow: hidden;
 
   &__track {
@@ -26,19 +28,29 @@
 
   &__controls {
     width: 100%;
+    @include flexbox(column, wrap);
+    align-items: center;
+    gap: 1rem;
   }  
 
   &__arrow {
+    width: 2rem;
+    height: 2rem;
+    @include flexbox(row, wrap);
+    justify-content: center;
+    align-items: center;
     border: none;
-    background: yellow;
-    width: auto;
-    height: auto;
+    border-radius: 50%;
+    padding: 0;
+
+    &:hover {
+      background-color: #CCC;
+      transition: 0.3s ease-in-out;
+    }
 
     &-icon {
-      width: 1.625rem;
-      height: auto;
-      object-fit: contain;
-      display: block;
+      width: 60%;
+      height: 60%;
     }
   }
 
@@ -52,8 +64,8 @@
 
   &__label {
     width: fit-content;
-    background-color: #666;
-    color: $white;
+    background-color: #EEE;
+    color: #1A1A1A;
     font-size: 0.875rem;
     font-weight: 500;
     border-radius: 0.5rem;
@@ -64,6 +76,7 @@
 
     &.active {
       background-color: $dark-blue;
+      color: $white;
     }
   }
 
