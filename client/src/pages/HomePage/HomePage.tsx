@@ -92,7 +92,10 @@ export default function HomePage() {
 
       <section className="home__upcoming-events">
         <h2 className="home__subheading">Upcoming Events</h2>
-        <Carousel className="upcoming-events__carousel">
+        <Carousel 
+            className="upcoming-events__carousel" 
+            dates={upcomingEvents.map((event) => event.date )}
+          >
             {upcomingEvents.map((event) => (
               <li key={event.id} className="upcoming-events__item">
                 <Card
