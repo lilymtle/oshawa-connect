@@ -10,7 +10,7 @@ const imagePath = "/assets/images/upcoming-event-image";
 export const upcomingEvents: UpcomingEventsProps[] = [
     {
         id: 1,
-        date: "August 30, 2025",
+        date: "Aug 30, 2025",
         name: "SixQuad Summer League",
         image: `${imagePath}-1.png`
     },
