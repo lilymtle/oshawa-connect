@@ -119,7 +119,10 @@
     &__card {
         width: 11.375rem;
         height: 19.9375rem;
+        @include flexbox(column, wrap);
+        justify-content: flex-end;
         position: relative;
+        padding: 0 !important;
     }
 
     &__overlay {
@@ -130,5 +133,35 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 1;
+    }
+
+    &__details {
+        color: $off-white;
+        @include flexbox(column, wrap);
+        gap: 0.5rem;
+        padding: 1rem;
+        position: relative;
+        z-index: 2;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 1.25rem;
+            z-index: -1; 
+        }
+    }
+
+    &__date {
+        font-size: .875rem;
+    }
+
+    &__date, &__name {
+        font-weight: 600;
     }
 }
