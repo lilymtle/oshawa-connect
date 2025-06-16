@@ -63,27 +63,7 @@ export default function Carousel({ className, children, dates }: CarouselProps) 
             </div>
 
             <div className="carousel__controls">
-                <div className="carousel__labels">
-                    {dates.map((date, i) => (
-                        <span
-                            key={i}
-                            role="button"
-                            tabIndex={0}
-                            className={`carousel__label ${i === index ? "active" : ""}`}
-                            onClick={() => setIndex(i)}
-                            onKeyDown={(event) => {
-                                if (event.key === "Enter" || event.key === " ") setIndex(i);
-                            }}
-                            aria-current={i === index}
-                            aria-label={`View event for ${date}`}
-                        >
-                            {date}
-                        </span>
-                    ))}
-                </div>
-                
-                <div className="carousel__buttons">
-                    <button
+                                    <button
                         className="carousel__arrow carousel__arrow--left"
                         onClick={() => setIndex((prev) => (prev - 1 + total) % total)}
                         aria-label="Previous Date"
@@ -95,7 +75,20 @@ export default function Carousel({ className, children, dates }: CarouselProps) 
                         />
                     </button>
 
-                    <button
+
+                <div className="carousel__dots">
+                    {cards.map((_, i) => (
+                        <button
+                            key={i}
+                            className={`carousel__dot ${i === index ? "active" : ""}`}
+                            onClick={() => setIndex(i)}
+                            aria-label={`Go to slide ${i + 1}`}
+                            aria-current={i === index}
+                        />
+                    ))}                    
+                </div>
+
+                                    <button
                         className="carousel__arrow carousel__arrow--right"
                         onClick={() => setIndex((prev) => (prev + 1) % total)}
                         aria-label="Next date"
@@ -106,7 +99,6 @@ export default function Carousel({ className, children, dates }: CarouselProps) 
                             alt="Right arrow"
                         />
                     </button>
-                </div>
             </div>
         </div>
     );
