@@ -1,53 +1,63 @@
-import React, { useRef, useState } from "react";
-import "./Carousel.scss"
+import React, { useEffect, useRef, useState } from "react";
+import "./Carousel.scss";
 
 interface CarouselProps {
     className: string;
     children: React.ReactNode;
+    dates: string[];
 }
 
-export default function Carousel({ className, children }: CarouselProps) {
+export default function Carousel({ className, children, dates }: CarouselProps) {
     const carouselRef = useRef<HTMLUListElement>(null);
+    const cards = React.Children.toArray(children);
+    const total = cards.length;
+    const [index, setIndex] = useState(0);
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const childrenArr = React.Children.toArray(children);
-    const totalSlides = childrenArr.length;
+    const scrollToIndex = (i: number) => {
+        const track = carouselRef.current;
 
-    const scrollToIndex = (index: number) => {
-        const scrollAmount = 300;
-        carouselRef.current?.scrollTo({
-            left: index * scrollAmount,
-            behavior: "smooth"
-        });
+        if (track) {
+        const card = track.querySelector('.carousel__card') as HTMLElement;
+        const wrapper = track.parentElement as HTMLElement;
+
+        if (card && wrapper) {
+            const cardWidth = card.offsetWidth + 16;
+            const wrapperWidth = wrapper.offsetWidth;
+            const offset = (cardWidth * i) - (wrapperWidth / 2) + (cardWidth / 2);
+
+            track.style.transform = `translateX(-${Math.max(offset, 0)}px)`;
+        }
+        }
     };
 
-    const handleLeft = () => {
-        const newIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        setCurrentIndex(newIndex);
-        scrollToIndex(newIndex);
-    };
-
-    const handleRight = () => {
-        const newIndex = (currentIndex + 1) % totalSlides;
-        setCurrentIndex(newIndex);
-        scrollToIndex(newIndex);
-    }
+    useEffect(() => {
+        scrollToIndex(index);
+    }, [index]);
 
     return (
         <div className={`carousel ${className}`}>
-            <button className="carousel__arrow carousel__arrow--left" onClick={handleLeft}>
-                <img className="carousel__arrow-icon" src="/assets/icons/arrow-left.svg" alt="Left Arrow" />
-            </button>
 
             <div className="carousel__track-wrapper">
                 <ul className="carousel__track" ref={carouselRef}>
-                    {children}
+                    {cards.map((child, i) => (
+                        <li key={i} className="carousel__card">
+                            {child}
+                        </li>
+                    ))}
                 </ul>
             </div>
 
-            <button className="carousel__arrow carousel__arrow--right" onClick={handleRight}>
-                <img className="carousel__arrow-icon" src="/assets/icons/arrow-right.svg" alt="Right Arrow" />
-            </button>
+            <div className="carousel__labels">
+                {dates.map((date, i) => (
+                    <span
+                        key={i}
+                        className={`carousel__label ${i === index ? "active" : ""}`}
+                        onClick={() => setIndex(i)}
+                    >
+                        {date}
+                    </span>
+                ))}
+            </div>
         </div>
-    )
+    );
 }
