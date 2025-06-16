@@ -1,2 +1,53 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &__track {
+    @include flexbox(row, nowrap);
+    transition: transform 0.5s ease-in-out;
+    // padding: 0;
+
+    &-wrapper {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  &__card {
+    width: 11.375rem;
+    // flex: 0 0 auto;
+    margin: 0 .5rem;
+  }
+
+  &__controls {
+    // @include flexbox(row, wrap);
+    // gap: 1rem;
+  }  
+
+  &__labels {
+    @include flexbox(row, nowrap);
+    // justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: .75rem;
+  }
+
+  &__label {
+    background-color: $charcoal-blue;
+    color: $white;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    // transition: background-color 0.2s;
+
+    &.active {
+      background-color: $dark-blue;
+    }
+  }
+}
