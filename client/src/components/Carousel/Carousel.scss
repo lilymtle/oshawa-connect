@@ -28,14 +28,22 @@
 
   &__controls {
     width: 100%;
-    @include flexbox(column, wrap);
+    @include flexbox(row, wrap);
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
   }  
 
+    &__buttons {
+    @include flexbox(row, wrap);
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
   &__arrow {
-    width: 2rem;
-    height: 2rem;
+    width: 30px;
+    height: 30px;
     @include flexbox(row, wrap);
     justify-content: center;
     align-items: center;
@@ -54,36 +62,26 @@
     }
   }
 
-  &__labels {
-    @include flexbox(row, nowrap);
-    // justify-content: center;
-    // align-items: center;
-    gap: 0.5rem;
-    margin-top: .75rem;
+  &__dots {
+    @include flexbox(row, wrap);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
   }
 
-  &__label {
-    width: fit-content;
-    background-color: #EEE;
-    color: #1A1A1A;
-    font-size: 0.875rem;
-    font-weight: 500;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: $medium-grey;
     cursor: pointer;
-    // transition: background-color 0.2s;
+    box-sizing: border-box;
+    padding: 0;
+
 
     &.active {
-      background-color: $dark-blue;
-      color: $white;
+      background-color: $champagne-gold;
     }
-  }
-
-  &__buttons {
-    @include flexbox(row, wrap);
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
   }
 }
