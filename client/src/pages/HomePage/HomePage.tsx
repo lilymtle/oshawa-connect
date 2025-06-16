@@ -114,7 +114,6 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
-
         </section>
       </section>
     </section>
