@@ -63,17 +63,6 @@ export default function Carousel({ className, children, dates }: CarouselProps) 
             </div>
 
             <div className="carousel__controls">
-                <button
-                    className="carousel__arrow carousel__arrow--left"
-                    onClick={() => setIndex((prev) => (prev - 1 + total) % total)}
-                    aria-label="Previous Date"
-                >
-                    <img
-                        className="carousel__arrow-icon"
-                        src="/assets/icons/arrow-left.svg" alt="Left arrow" 
-                    />
-                </button>
-
                 <div className="carousel__labels">
                     {dates.map((date, i) => (
                         <span
@@ -92,16 +81,32 @@ export default function Carousel({ className, children, dates }: CarouselProps) 
                         </span>
                     ))}
                 </div>
+                
+                <div className="carousel__buttons">
+                    <button
+                        className="carousel__arrow carousel__arrow--left"
+                        onClick={() => setIndex((prev) => (prev - 1 + total) % total)}
+                        aria-label="Previous Date"
+                    >
+                        <img
+                            className="carousel__arrow-icon"
+                            src="/assets/icons/arrow-left.svg" 
+                            alt="Left arrow" 
+                        />
+                    </button>
 
-                <button
-                    className="carousel__arrow carousel__arrow--right"
-                    onClick={() => setIndex((prev) => (prev + 1) * total)}
-                    aria-label="Next date"
-                >
-                    <img
-                        src="/assets/icons/arrow-right.svg" alt="Right arrow"
-                    />
-                </button>
+                    <button
+                        className="carousel__arrow carousel__arrow--right"
+                        onClick={() => setIndex((prev) => (prev + 1) % total)}
+                        aria-label="Next date"
+                    >
+                        <img
+                            className="carousel__arrow-icon"
+                            src="/assets/icons/arrow-right.svg" 
+                            alt="Right arrow"
+                        />
+                    </button>
+                </div>
             </div>
         </div>
     );
