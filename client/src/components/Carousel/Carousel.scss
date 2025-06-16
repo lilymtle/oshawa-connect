@@ -25,29 +25,52 @@
   }
 
   &__controls {
-    // @include flexbox(row, wrap);
-    // gap: 1rem;
+    width: 100%;
   }  
+
+  &__arrow {
+    border: none;
+    background: yellow;
+    width: auto;
+    height: auto;
+
+    &-icon {
+      width: 1.625rem;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+  }
 
   &__labels {
     @include flexbox(row, nowrap);
     // justify-content: center;
-    align-items: center;
+    // align-items: center;
     gap: 0.5rem;
     margin-top: .75rem;
   }
 
   &__label {
-    background-color: $charcoal-blue;
+    width: fit-content;
+    background-color: #666;
     color: $white;
     font-size: 0.875rem;
+    font-weight: 500;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    text-align: center;
     cursor: pointer;
     // transition: background-color 0.2s;
 
     &.active {
       background-color: $dark-blue;
     }
+  }
+
+  &__buttons {
+    @include flexbox(row, wrap);
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
   }
 }
