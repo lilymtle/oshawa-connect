@@ -12,5 +12,11 @@
 
     &__whats-next {
         background-color: #B58900;
+
+        &-feedback {
+            background-color: $off-white;
+            border-radius: 1.25rem;
+            padding: 1rem;
+        }
     }
 }
