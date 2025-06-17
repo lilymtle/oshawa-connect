@@ -1,2 +1,16 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
+
+.about {
+    &__wrapper, &__how-it-works, &__whats-next, &__behind-the-screen {
+        padding: 1rem;
+    }
+
+    &__wrapper {
+        background-color: $charcoal-blue;
+    }
+
+    &__whats-next {
+        background-color: #B58900;
+    }
+}
