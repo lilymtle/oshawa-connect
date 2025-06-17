@@ -5,7 +5,7 @@ interface NavLinkProps {
 
 export const navLinks: NavLinkProps[] = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/" },
+    { name: "About", path: "/about" },
     { name: "FAQs", path: "/" },
     { name: "Contact", path: "/" },
     { name: "Events", path: "/" },
