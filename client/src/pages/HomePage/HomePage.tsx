@@ -19,12 +19,12 @@ export default function HomePage() {
           Discover places, spaces, and stories that define Oshawa. Your favourite spot might just be around the corner.
         </p>
 
-        <div className="home__discover-wrapper">
-          <ul className="home__discover-list">
+        <div className="discover__wrapper">
+          <ul className="discover__list">
             {discoverCards.map((card, index) => (
               <motion.li
                 key={card.id}
-                className="home__discover-list-item card"
+                className="discover__card card"
                 animate={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -32,11 +32,11 @@ export default function HomePage() {
               >
                 <card.icon />
 
-                <p className="home__discover-label">
+                <p className="discover__title">
                   {card.title}
                 </p>
 
-                <p className="home__discover-text">
+                <p className="discover__description">
                   {card.description}
                 </p>
               </motion.li>
