@@ -27,12 +27,33 @@ h1 {
     letter-spacing: 0.1rem;
 }
 
-h2 {
+/* h2 */
+.section-heading {
     font-family: $primary-font;
     font-size: 24px;
     color: map-get($heading-colors, h2);
     letter-spacing: 0.1rem;
+
+    &--white {
+        color: $off-white;
+    }
+
+    &--gold {
+        color: $champagne-gold;
+    }
 }
+
+/* h3 */
+.content-heading {
+    font-family: $primary-font;
+    font-size: 20px;
+    color: map-get($heading-colors, h3);
+
+    &--onyx {
+        color: $onyx;
+    }
+}
+
 
 p {
     font-size: 1rem;
