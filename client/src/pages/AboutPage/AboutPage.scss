@@ -12,9 +12,14 @@
 
     &__whats-next {
         background-color: #B58900;
+        @include flexbox(column, wrap);
+        gap: 1rem;
 
         &-feedback {
+            height: 244px;
             background-color: $off-white;
+            @include flexbox(column, wrap);
+            justify-content: space-between;
             border-radius: 1.25rem;
             padding: 1rem;
         }
