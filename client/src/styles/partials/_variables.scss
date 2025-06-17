@@ -8,8 +8,10 @@ $marigold: #DDA853;
 $white: #FFFFFF;
 $ghost-white: #F8FAFC;
 $off-white: #F5F5F5;
+$onyx: #1A1A1A;
 $dark-grey: #2C2C2C;
 $medium-grey: #404040;
+$light-grey: #CCCCCC;
 
 /* --- descriptive variables --*/
 
@@ -48,9 +50,16 @@ $buttons: (
     )
 );
 
+/* carousel controls */
+$dot: (
+    bg: $medium-grey,
+    active-bg: $champagne-gold,
+);
+$arrow-btn-hover: $light-grey;
+
 /* footer */
 $footer: (
-    bg: ($charcoal-blue),
+    bg: $charcoal-blue,
     label-font: $primary-font,
     label-color: $champagne-gold,
     link-font: $secondary-font,
