@@ -46,14 +46,14 @@ export default function HomePage() {
       </section>
 
       <section className="home__learn-more">
-        <div className="home__learn-more-wrapper">
-          <p className="home__learn-more-text">
-            <span className="home__learn-more-text--gold">Oshawa Connect</span> is more than just a directory—it’s a way to engage, support,
-            and discover. <span className="home__learn-more-text--gold">Because community</span> isn’t just where you live—it’s how you connect, grow, and belong.
+        <div className="learn-more__wrapper">
+          <p className="learn-more__description">
+            <span className="learn-more__description--gold">Oshawa Connect</span> is more than just a directory—it’s a way to engage, support,
+            and discover. <span className="learn-more__description--gold">Because community</span> isn’t just where you live—it’s how you connect, grow, and belong.
           </p>
 
           <Button
-            className="home__learn-more-btn"
+            className="learn-more__btn"
             variant="secondary"
             label="Learn More"
           />
