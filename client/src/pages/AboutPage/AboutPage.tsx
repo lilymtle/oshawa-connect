@@ -1,3 +1,4 @@
+import Button from "../../components/Button/Button";
 import "./AboutPage.scss"
 
 export default function AboutPage() {
@@ -17,6 +18,12 @@ export default function AboutPage() {
 
                 <div className="about__whats-next-feedback">
                     <h3 className="content-heading content-heading--onyx">Your City, Your Voice</h3>
+
+                    <Button
+                        className="whats-next-feedback__btn"
+                        variant="primary"
+                        label="Help Make This Better"
+                    />
                 </div>
             </section>
 
