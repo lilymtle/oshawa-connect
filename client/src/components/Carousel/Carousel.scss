@@ -42,8 +42,8 @@
   }
 
   &__arrow {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     @include flexbox(row, wrap);
     justify-content: center;
     align-items: center;
@@ -52,7 +52,7 @@
     padding: 0;
 
     &:hover {
-      background-color: #CCC;
+      background-color: $arrow-btn-hover;
       transition: 0.3s ease-in-out;
     }
 
@@ -70,18 +70,18 @@
   }
 
   &__dot {
-    width: 12px;
-    height: 12px;
+    width: .75rem;
+    height: .75rem;
     border-radius: 50%;
     border: none;
-    background-color: $medium-grey;
+    background-color: map-get($dot, bg);
     cursor: pointer;
     box-sizing: border-box;
     padding: 0;
 
 
     &.active {
-      background-color: $champagne-gold;
+      background-color: map-get($dot, active-bg);
     }
   }
 }
