@@ -15,6 +15,10 @@ export default function HomePage() {
       <section className="home__discover">
         <h2 className="home__subheading">Discover Oshawa</h2>
 
+        <p className="discover__description">
+          Discover places, spaces, and stories that define Oshawa. Your favourite spot might just be around the corner.
+        </p>
+
         <div className="home__discover-wrapper">
           <ul className="home__discover-list">
             {discoverCards.map((card, index) => (
@@ -59,6 +63,11 @@ export default function HomePage() {
       <section className="home__community-spotlight">
         <h2 className="home__subheading">Community Spotlight</h2>
 
+        <p className="community-spotlight__description">
+          Each month, Oshawa Connect spotlight a local gem that helps make Oshawa vibrant. 
+          Discover the flavour, passion, and community spirit that shape our city.
+        </p>
+
         <Card
           className="community-spotlight__card">
           <div className="community-spotlight__details">
@@ -92,6 +101,12 @@ export default function HomePage() {
 
       <section className="home__upcoming-events">
         <h2 className="home__subheading">Upcoming Events</h2>
+
+        <p className="upcoming-events__description">
+          Get a glimpse of what's happening in Oshawa, from festivals and markets to neighbourhood celebrations. These are the moments
+          that bring the city together.
+        </p>
+
         <Carousel 
             className="upcoming-events__carousel" 
             dates={upcomingEvents.map((event) => event.date )}
