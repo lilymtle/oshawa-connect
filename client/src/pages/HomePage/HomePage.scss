@@ -20,17 +20,6 @@
         font-family: $primary-font;
         font-size: 20px;
         padding: 2rem;
-
-        &-wrapper {
-            @include flexbox(column, wrap);
-            gap: 1rem;
-        }
-
-        &-text {
-            &--gold {
-                color: $champagne-gold;
-            }
-        }
     }
 
     /* --- community spotlight section --- */
@@ -67,6 +56,20 @@
 
     &__description {
         text-align: center;
+    }
+}
+
+/* --- learn more content --- */
+.learn-more {
+    &__wrapper {
+        @include flexbox(column, wrap);
+        gap: 1rem;
+    }
+
+    &__description {
+        &--gold {
+            color: $champagne-gold;
+        }
     }
 }
 
