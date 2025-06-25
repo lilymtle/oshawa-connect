@@ -7,14 +7,14 @@ export default function AboutPage() {
             <div className="about__wrapper">
                 <h2 className="section-heading section-heading--gold">Oshawa Connect</h2>
 
-                <p className="about__description">
+                <p className="about__description text text--white">
                     A way to help connect locals to events, businesses, and resources all in one place. Whether you’re new to town or a 
                     lifelong resident, this website is made to bring the community closer together.
                 </p>
                 
                 <h3 className="content-heading content-heading--white">How It Started</h3>
 
-                <p className="how-it-started__description">
+                <p className="how-it-started__description text text--white">
                     I wanted to give back to a community that had openly welcomed me. At the same time, I kept noticing people in online 
                     communities expressing how disconnected they felt from Oshawa and each other. That stuck with me, so I decided to build 
                     something to help bridge that gap.
@@ -29,12 +29,12 @@ export default function AboutPage() {
             <section className="about__whats-next">
                 <h2 className="section-heading section-heading--white">What's Next</h2>
 
-                <p className="whats-next__description">
+                <p className="whats-next__description text text--white">
                     Right now, all updates are done manually, but I’d love to automate some of that in the future. I’m exploring ways 
                     (maybe web scraping?) to pull in local events and happenings around Oshawa more efficiently.
                 </p>
 
-                <p className="whats-next__description">
+                <p className="whats-next__description text text--white">
                     I’m also planning to create a way for residents to suggest events, businesses, or community resources that aren’t listed 
                     yet. This could start with a simple submission form, and eventually grow into something more interactive—like user 
                     accounts and self-managed listings.
@@ -43,7 +43,7 @@ export default function AboutPage() {
                 <div className="whats-next__feedback">
                     <h3 className="content-heading content-heading--onyx">Your City, Your Voice</h3>
 
-                    <p className="whats-next__feedback-description">
+                    <p className="whats-next__feedback-description text">
                         Oshawa Connect is built for the city—and shaped by the people who live here. If you’ve got ideas, corrections, or 
                         features you’d love to see, I’m all ears. Your input helps guide what comes next.
                     </p>

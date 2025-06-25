@@ -12,8 +12,8 @@ export default function Hero() {
             <div className="hero__overlay"></div>
 
             <div className="hero__content">
-                <h1>Your <span className="hero__accent">City</span>, Your <span className="hero__accent">Story</span></h1>
-                <p>Connecting Oshawa—events, businesses, and community.</p>
+                <h1 className="page-heading">Your <span className="hero__accent">City</span>, Your <span className="hero__accent">Story</span></h1>
+                <p className="text text--white">Connecting Oshawa—events, businesses, and community.</p>
             </div>
         </div>
     );
