@@ -59,6 +59,12 @@ export default function AboutPage() {
             <section className="about__behind-the-screen">
                 <h2 className="section-heading">Behind the Screen</h2>
 
+                <img
+                    className="behind-the-screen__image"
+                    src="/assets/images/acnh-character.png"
+                    alt="Animal Crossing-style girl with glasses, pigtails, and overalls on a green patterned background."
+                />
+
                 <p className="behind-the-screen__description">
                     A developer with a love for community projects and buildhing tools that matter. I started Oshawa Connect to sharpen my 
                     coding skills and give folks in my town an easier way to stay connected to what’s happening around them.
