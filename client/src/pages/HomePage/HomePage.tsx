@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <section className="home">
       <section className="home__discover">
-        <h2 className="home__subheading">Discover Oshawa</h2>
+        <h2 className="section-heading">Discover Oshawa</h2>
 
         <p className="discover__description">
           Discover places, spaces, and stories that define Oshawa. Your favourite spot might just be around the corner.
@@ -61,7 +61,7 @@ export default function HomePage() {
       </section>
 
       <section className="home__community-spotlight">
-        <h2 className="home__subheading">Community Spotlight</h2>
+        <h2 className="section-heading">Community Spotlight</h2>
 
         <p className="community-spotlight__description">
           Each month, Oshawa Connect spotlight a local gem that helps make Oshawa vibrant. 
@@ -100,7 +100,7 @@ export default function HomePage() {
       </section>
 
       <section className="home__upcoming-events">
-        <h2 className="home__subheading">Upcoming Events</h2>
+        <h2 className="section-heading">Upcoming Events</h2>
 
         <p className="upcoming-events__description">
           Get a glimpse of what's happening in Oshawa, from festivals and markets to neighbourhood celebrations. These are the moments
