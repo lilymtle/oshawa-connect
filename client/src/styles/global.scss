@@ -21,7 +21,12 @@ li {
     list-style-type: none;
 }
 
-h1 {
+a {
+    text-decoration: none;
+}
+
+/* h1 */
+.page-heading {
     font-family: $primary-font;
     font-size: 34px;
     letter-spacing: 0.1rem;
@@ -59,11 +64,10 @@ h1 {
     }
 }
 
-
-p {
+.text {
     font-size: 1rem;
-}
 
-a {
-    text-decoration: none;
+    &--white {
+        color: $off-white;
+    }
 }
