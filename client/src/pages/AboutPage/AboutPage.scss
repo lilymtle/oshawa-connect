@@ -8,20 +8,36 @@
 
     &__wrapper {
         background-color: $charcoal-blue;
+        @include flexbox(column, wrap);
+        gap: 1rem;
     }
 
     &__whats-next {
         background-color: #B58900;
         @include flexbox(column, wrap);
         gap: 1rem;
-
-        &-feedback {
-            height: 244px;
-            background-color: $off-white;
-            @include flexbox(column, wrap);
-            justify-content: space-between;
-            border-radius: 1.25rem;
-            padding: 1rem;
-        }
     }
+
+    &__behind-the-screen {
+                @include flexbox(column, wrap);
+        gap: 1rem;
+    }
+}
+
+.about__description, .how-it-started__description, .whats-next__description {
+    color: $off-white;
+}
+
+.whats-next__feedback {
+    height: 244px;
+    background-color: $off-white;
+    @include flexbox(column, wrap);
+    justify-content: space-between;
+    border-radius: 1.25rem;
+    padding: 1rem;
+}
+
+.behind-the-screen__image {
+    width: 100%;
+    height: auto;
 }
