@@ -11,15 +11,23 @@
         @include flexbox(column, wrap);
         gap: 1rem;
         padding: 1rem;
+
+        @include tablet {
+            padding: 2.5rem;
+        }
     }
 
     /* --- learn more section --- */
     &__learn-more {
         background-color: $charcoal-blue;
         color: $white;
-        font-family: $primary-font;
         font-size: 20px;
         padding: 2rem;
+
+        @include tablet {
+            padding-block: 5rem;
+            padding-inline: 12rem;
+        }
     }
 
     /* --- community spotlight section --- */
@@ -42,16 +50,27 @@
     &__list {
         @include flexbox(column, wrap);
         gap: 1rem;
+
+        @include tablet {
+            @include flexbox(row, wrap);
+        }
     }
 
     &__card {
         @include flexbox(column, wrap);
         align-items: center;
-        gap: 0.5rem;
+        gap: 1rem;
+
+        @include tablet {
+            gap: 1rem;
+        }
     }
 
     &__title {
+        font-size: 1.125rem;
+        color: $charcoal-blue;
         font-weight: 600;
+        text-align: center;
     }
 
     &__description {

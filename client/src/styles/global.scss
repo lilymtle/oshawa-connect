@@ -25,6 +25,10 @@ h1 {
     font-family: $primary-font;
     font-size: 34px;
     letter-spacing: 0.1rem;
+
+    @include tablet {
+        font-size: 40px;
+    }
 }
 
 /* h2 */
@@ -33,6 +37,7 @@ h1 {
     font-size: 24px;
     color: map-get($heading-colors, h2);
     letter-spacing: 0.1rem;
+    text-align: center;
 
     &--white {
         color: $off-white;
