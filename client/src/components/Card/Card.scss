@@ -1,7 +1,9 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
-.card {
+// basic unviersal card styling
+
+.card {   
     border: .0625rem solid #F0F0F0;
     border-radius: 1.25rem;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
@@ -9,5 +11,16 @@
 
     @include tablet {
         padding: 2rem;
+    }
+
+    &__heading {
+        font-size: 1.125rem;
+        color: $charcoal-blue;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__description {
+        text-align: center;
     }
 }
