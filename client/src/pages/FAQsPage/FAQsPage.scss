@@ -1,3 +1,24 @@
 @use "../../styles/partials/mixins.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 
+.faqs {
+    padding: 1rem;
+
+    &__wrapper {
+        @include flexbox(column);
+        gap: 1rem;
+    }
+
+    &__list {
+        @include flexbox(column);
+        gap: 1rem;
+    }
+
+    &__card {
+        width: auto;
+        height: 8rem;
+        @include flexbox(column, wrap);
+        justify-content: center;
+    }
+}
+
