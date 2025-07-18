@@ -7,8 +7,9 @@ import Hero from './components/Hero/Hero'
 import Footer from './components/Footer/Footer'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutPage from './pages/AboutPage/AboutPage'
-import { FAQsPage } from './pages/FAQsPage/FAQsPage'
-import { FAQsCategoryPage } from './pages/FAQsCategoryPage/FAQsCategoryPage'
+import FAQsPage from './pages/FAQsPage/FAQsPage'
+import FAQsCategoryPage from './pages/FAQsCategoryPage/FAQsCategoryPage'
+import ContactPage from './pages/ContactPage/ContactPage'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -20,7 +21,9 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/" element={ <HomePage />} />
           <Route path="/about" element={ <AboutPage /> } />
           <Route path="/faqs" element={  <FAQsPage /> } />
+          <Route path ="/faqs" element={ <FAQsPage /> } />
           <Route path="/faqs/:category" element={ <FAQsCategoryPage /> } />
+          <Route path="/contact" element={ <ContactPage /> } />
         </Routes>
       </main>
       <Footer />
