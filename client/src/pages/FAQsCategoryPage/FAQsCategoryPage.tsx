@@ -11,7 +11,7 @@ import { Divider } from "@mui/material";
 /* --- data --- */
 import { FAQsCard, FAQs } from "../../data/faqsData";
 
-export function FAQsCategoryPage() {
+export default function FAQsCategoryPage() {
     const { category } = useParams<{ category: string }>();
     const navigate = useNavigate();
 

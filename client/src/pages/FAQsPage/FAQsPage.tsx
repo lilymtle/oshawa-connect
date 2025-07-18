@@ -4,7 +4,7 @@ import Card from "../../components/Card/Card";
 
 import { Link } from "react-router-dom";
 
-export function FAQsPage() {
+export default function FAQsPage() {
     return (
         <section className="faqs">
             <div className="faqs__wrapper">
