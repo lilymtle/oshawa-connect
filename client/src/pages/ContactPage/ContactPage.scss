@@ -60,6 +60,12 @@
         &--textarea {
             height: 15rem;
         }
+
+        &:focus {
+            outline: none;
+            border: transparent;
+            box-shadow: 0 0 0 3px rgba(39, 84, 138, 0.4);
+        }
     }
 }
 
