@@ -32,11 +32,11 @@ export default function HomePage() {
               >
                 <card.icon />
 
-                <p className="discover__title">
+                <p className="card__heading">
                   {card.title}
                 </p>
 
-                <p className="discover__description">
+                <p className="card__description">
                   {card.description}
                 </p>
               </motion.li>
