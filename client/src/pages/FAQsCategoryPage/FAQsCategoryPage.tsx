@@ -30,7 +30,12 @@ export function FAQsCategoryPage() {
 
     return (
         <section className="faqs__category">
-            <a className="faqs__link" href="#" onClick={handleBackClick}>
+            <a className="faqs__link faqs__link--back" href="#" onClick={handleBackClick}>
+                <img
+                    className="faqs__icon faqs__icon--chevron"
+                    src="/assets/icons/chevron-left.svg"
+                    alt="Left Chevron"
+                />
                 Back
             </a>
 
@@ -50,7 +55,7 @@ export function FAQsCategoryPage() {
                 <ul className="faqs__list faqs__list--nav">
                     {filteredFAQs.map((faq) =>
                         <li key={faq.id} className="faqs__item">
-                            <a href={`#faq-${faq.id}`}>
+                            <a className="faqs__link" href={`#faq-${faq.id}`}>
                                 {faq.question}
                             </a>
                         </li>
