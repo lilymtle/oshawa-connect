@@ -80,6 +80,7 @@ export default function ContactPage() {
 
                     <Button
                         className="form__button"
+                        type="submit"
                         variant="primary"
                         label="Send"
                     />
