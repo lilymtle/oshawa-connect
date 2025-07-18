@@ -7,6 +7,7 @@ import Hero from './components/Hero/Hero'
 import Footer from './components/Footer/Footer'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutPage from './pages/AboutPage/AboutPage'
+import { FAQsPage } from './pages/FAQsPage/FAQsPage'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path="/" element={ <HomePage />} />
           <Route path="/about" element={ <AboutPage /> } />
+          <Route path="/faqs" element={  <FAQsPage /> } />
         </Routes>
       </main>
       <Footer />
