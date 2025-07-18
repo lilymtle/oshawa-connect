@@ -1,0 +1,24 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.faqs {
+    &__category {
+        @include flexbox(column, wrap);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    &__nav {
+        @include flexbox(column, wrap);
+        gap: 1rem;
+    }
+
+    &__list, &__item {
+        @include flexbox(column, wrap);
+        gap: 1rem;
+    }
+
+    &__question {
+        font-weight: 600;
+    }
+}
