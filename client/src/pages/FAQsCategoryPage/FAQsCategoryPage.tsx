@@ -2,7 +2,7 @@
 import "./FAQsCategoryPage.scss";
 
 /* -- react imports --*/
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 /* --- components --- */
 
@@ -13,6 +13,12 @@ import { FAQsCard, FAQs } from "../../data/faqsData";
 
 export function FAQsCategoryPage() {
     const { category } = useParams<{ category: string }>();
+    const navigate = useNavigate();
+
+    const handleBackClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+        event.preventDefault();
+        navigate(-1);
+    };
 
     const matchedCategory = FAQsCard.find(
         (card) => card.slug === category
@@ -24,6 +30,10 @@ export function FAQsCategoryPage() {
 
     return (
         <section className="faqs__category">
+            <a className="faqs__link" href="#" onClick={handleBackClick}>
+                Back
+            </a>
+
             <div className="faqs__wrapper">
                 <h2 className="section-heading">
                     { matchedCategory?.category || "Category Not Found" }
