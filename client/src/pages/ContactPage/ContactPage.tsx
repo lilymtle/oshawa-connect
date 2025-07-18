@@ -16,6 +16,12 @@ export default function ContactPage() {
             </div>
 
             <div className="contact__form-container">
+                <div className="contact__form-container-banner">
+                    <div className="circle circle--red"></div>
+                    <div className="circle circle--yellow"></div>
+                    <div className="circle circle--green"></div>
+                </div>
+
                 <form className="form">
                     <div className="form__field">
                         <label 
