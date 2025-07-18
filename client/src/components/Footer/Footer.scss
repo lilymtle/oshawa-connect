@@ -12,32 +12,41 @@
         @include flexbox(column, wrap);
         align-items: center;
         gap: 2rem;
+    }
 
-        &-wrapper {
-            width: 100%;
-            @include flexbox(column, wrap);
-            align-items: center;
-            gap: 1rem;
+    &__wrapper {
+    width: 100%;
+    @include flexbox(column, wrap);
+    align-items: center;
+    gap: 1rem;
+    }
+
+    &__label {
+        font-family: map-get($footer, label-font);
+        font-size: 1rem;
+        color: map-get($footer, label-color);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+    }
+
+    &__list {
+        @include flexbox(column, wrap);
+        align-items: center;
+        gap: 0.5rem;
+
+        &-item {
+            font-family: map-get($footer, link-font);
+            color: map-get($footer, link-color);
         }
+    }
 
-        &-label {
-            font-family: map-get($footer, label-font);
-            font-size: 1rem;
-            color: map-get($footer, label-color);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.25rem;
-        }
+    &__link {
+        color: white;
 
-        &-list {
-            @include flexbox(column, wrap);
-            align-items: center;
-            gap: 0.5rem;
-
-            &-item {
-                font-family: map-get($footer, link-font);
-                color: map-get($footer, link-color);
-            }
+        &:hover {
+            color: $champagne-gold;
+            transition: 0.5s ease-in-out;
         }
     }
 }
