@@ -1,0 +1,45 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.contact {
+    @include flexbox(column, wrap);
+    gap: 1rem;
+    padding: 1rem;
+
+    &__wrapper {
+        @include flexbox(column, wrap);
+        gap: 1rem;
+    }
+}
+
+.form {
+    @include flexbox(column, wrap);
+    gap: 1rem;
+
+    &__required {
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    &__field {
+        @include flexbox(column, wrap);
+        gap: 0.5rem;
+    }
+
+    &__label {
+        font-weight: 500;
+    }
+
+    &__input {
+        font-family: $secondary-font;
+        font-size: 1rem;
+        border-radius: 8px;
+        border: 1px #666 solid;
+        padding-block: 0.5rem;
+        padding-inline: 1rem;
+
+        &--textarea {
+            height: 15rem;
+        }
+    }
+}
