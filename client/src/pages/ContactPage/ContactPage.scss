@@ -10,13 +10,32 @@
         @include flexbox(column, wrap);
         gap: 1rem;
     }
+
+    &__form-container {
+        border: 1px #CCC solid;
+        border-radius: 8px;
+
+        &-banner {
+            height: 27px;
+            background-color: #585555;
+            @include flexbox(row);
+            align-items: center;
+            gap: 0.5rem;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            padding: 1rem;
+        }
+    }
+
 }
 
 .form {
     @include flexbox(column, wrap);
     gap: 1rem;
+    padding: 1rem;
 
     &__required {
+        font-size: 14px;
         font-style: italic;
         font-weight: 400;
     }
@@ -34,12 +53,30 @@
         font-family: $secondary-font;
         font-size: 1rem;
         border-radius: 8px;
-        border: 1px #666 solid;
+        border: 1px #CCC solid;
         padding-block: 0.5rem;
         padding-inline: 1rem;
 
         &--textarea {
             height: 15rem;
         }
+    }
+}
+
+.circle {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+    &--red {
+        background-color: #EE4B4B;;
+    }
+
+    &--yellow {
+        background-color: #E8C65B;
+    }
+
+    &--green {
+        background-color: #7AD480;
     }
 }
