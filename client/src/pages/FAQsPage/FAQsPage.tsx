@@ -1,6 +1,8 @@
 import "./FAQsPage.scss";
-import { FAQsCard, FAQs } from "../../data/faqsData";
+import { FAQsCard } from "../../data/faqsData";
 import Card from "../../components/Card/Card";
+
+import { Link } from "react-router-dom";
 
 export function FAQsPage() {
     return (
@@ -16,14 +18,16 @@ export function FAQsPage() {
                     <ul className="faqs__list">
                         {FAQsCard.map((card) => (
                             <li className="faqs__item">
-                                <Card
-                                    key={card.id}
-                                    className="faqs__card"
-                                >
-                                    <h3 className="card__heading">
-                                        {card.category}
-                                    </h3>
-                                </Card>
+                                <Link to={`/faqs/${card.slug}`}>
+                                    <Card
+                                        key={card.id}
+                                        className="faqs__card"
+                                    >
+                                        <h3 className="card__heading">
+                                            {card.category}
+                                        </h3>
+                                    </Card>
+                                </Link>
                             </li>
                         ))}
                     </ul>
