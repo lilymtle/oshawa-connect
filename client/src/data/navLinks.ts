@@ -10,5 +10,5 @@ export const navLinks: NavLinkProps[] = [
     { name: "Contact", path: "/contact" },
     { name: "Events", path: "/" },
     { name: "Community Resources", path: "/" },
-    { name: "Local Businesses", path: "/" }
+    { name: "Local Businesses", path: "/business" }
 ]
