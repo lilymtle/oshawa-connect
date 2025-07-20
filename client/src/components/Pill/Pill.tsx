@@ -1,5 +1,7 @@
+/* --- styling --- */
 import "./Pill.scss"
 
+/* --- props and types ---*/
 interface PillProps {
     id: number;
     category: string;
