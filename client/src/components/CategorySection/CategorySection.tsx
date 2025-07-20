@@ -13,14 +13,14 @@ import { businessCategories } from "../../data/categoriesList"
 export default function CategorySection() {
     return (
         <section className="category">
-            <div className="business__wrapper business__wrapper--category">
+            <div className="category__wrapper">
                 <h3 className="content-heading content-heading--onyx">Category</h3>
                 <Link className="category__link" to="/">
                     See all
                 </Link>
             </div>
 
-            <div className="category__wrapper">
+            <div className="category__list-wrapper">
                 <ul className="category__list">
                     {businessCategories.map((category) => (
                         <Pill

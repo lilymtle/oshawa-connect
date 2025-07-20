@@ -6,7 +6,9 @@
     gap: 1rem;
 
     &__wrapper {
-        position: relative;
+        @include flexbox(row);
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__list {
@@ -30,6 +32,10 @@
             height: 100%;
             width: 40%;
             background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5));
+        }
+
+        &-wrapper {
+            position: relative;
         }
     }
 }
