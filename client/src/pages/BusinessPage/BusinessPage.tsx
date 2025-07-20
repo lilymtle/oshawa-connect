@@ -3,6 +3,8 @@ import "./BusinessPage.scss"
 
 // components
 import CategorySection from "../../components/CategorySection/CategorySection"
+import Card from "../../components/Card/Card"
+import { localBusinesses } from "../../data/localBusinesses"
 
 export default function BusinessPage() {
     return (
@@ -17,6 +19,31 @@ export default function BusinessPage() {
             </div>
 
             <CategorySection />
+
+            <section className="business__cards">
+                <ul className="business__cards-list">
+                    {localBusinesses.map((business) => (
+                        <li className="business__list-item">
+                            <article className="business__card">
+                                <Card
+                                    variant="business"
+                                    className="business__card"
+                                    style={{
+                                        backgroundImage: `url(${business.image})`,
+                                        backgroundSize: "cover"
+                                    }}
+                                    title={business.name}
+                                    category={business.category}
+                                    rating={business.rating}
+                                    cuisine={business.details.cuisine}
+                                    distance={business.details.distance}
+                                    priceLevel={business.details.priceLevel}
+                                />
+                            </article>
+                        </li>
+                    ))}
+                </ul>
+            </section>
         </section>
     )
 }
