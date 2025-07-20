@@ -1,0 +1,35 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.category {
+    @include flexbox(column);
+    gap: 1rem;
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__list {
+        @include flexbox(row);
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+        &::after {
+            content: "";
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 40%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5));
+        }
+    }
+}
