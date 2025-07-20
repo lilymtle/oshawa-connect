@@ -3,11 +3,11 @@ interface BusinessProps {
     category: string;
     name: string;
     rating: number;
+    image: string;
     details: BusinessDetailProps;
 }
 
 interface BusinessDetailProps {
-    id: number;
     address: BusinessAddressProps;
     hours: BusinessHoursProps[];
     phone: string;
@@ -15,7 +15,7 @@ interface BusinessDetailProps {
     description: string[];
     cuisine?: string;
     distance: number;
-    priceLevel: number;
+    priceLevel?: number;
 }
 
 interface BusinessAddressProps {
@@ -30,14 +30,16 @@ interface BusinessHoursProps {
     time: string;
 }
 
+const imagePath = "/assets/images/businesses";
+
 export const localBusinesses: BusinessProps[] = [
     {
         id: 1,
-        category: "Food & Drinks",
+        category: "food",
         name: "BanBan Korean Fried Chicken",
+        image: `${imagePath}/banban.jpg`,
         rating: 4.6,
         details: {
-            id: 1,
             address: {
                 street: "20 Athol Street W",
                 city: "Oshawa",
@@ -58,6 +60,36 @@ export const localBusinesses: BusinessProps[] = [
             ],
             distance: 1.1,
             priceLevel: 2
+        }
+    },
+    {
+        id: 2,
+        category: "attractions",
+        name: "NEB's Fun World",
+        image: `${imagePath}/nebs.jpg`,
+        rating: 4.5,
+        details: {
+            address: {
+                street: "1300 Wilson Rd N",
+                city: "Oshawa",
+                province: "ON",
+                postalCode: "L1K 2B8"
+            },
+            hours: [
+                {
+                    days: "Sunday - Thursday", time: "9:30 am - 10:00 pm"
+                },
+                {
+                    days: "Friday - Saturday", time: "9:30 am - 11:00 pm"
+                }
+            ],
+            phone: "(905) 723-2631",
+            website: "https://www.nebsfunworld.com",
+            description: [
+                "NEB’s Fun World in Oshawa is a premier indoor entertainment centre offering fun for the whole family. It features the world’s largest 5-pin bowling facility with 52 lanes, a massive arcade with over 120 games, and exciting rides including an indoor roller coaster and thrill rides.",
+                "For younger kids, there’s a large indoor play area, plus mini golf courses, virtual reality experiences, bumper cars, and a full-service lounge. NEB’s is also great for birthdays, group outings, and team-building events, making it a go-to spot for all ages."
+            ],
+            distance: 2,
         }
     }
 ]
