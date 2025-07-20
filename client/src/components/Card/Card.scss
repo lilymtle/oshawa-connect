@@ -22,5 +22,42 @@
 
     &__description {
         text-align: center;
+
+        &--business {
+            background-color: white;
+            height: 118px;
+            @include flexbox(column);
+            justify-content: space-between;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+    }
+
+    &__meta {
+        @include flexbox(row);
+        justify-content: space-between;
+    }
+
+    &__distance {
+        &-wrapper {
+            @include flexbox(row);
+            gap: 0.25rem;
+        }
+    }
+
+    &__icon {
+        &--map-pin {
+            width: 1.1875rem;
+        }
+
+        &--arrow-right {
+            width: 1.4375rem;
+        }
+    }
+
+    &--business {
+        height: 317px;
+        @include flexbox(column);
+        justify-content: flex-end;
     }
 }
