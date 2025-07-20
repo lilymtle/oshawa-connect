@@ -1,0 +1,10 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.pill {
+    width: fit-content;
+    height: 40px;
+    border-radius: 8px;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+}
