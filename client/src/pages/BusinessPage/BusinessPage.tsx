@@ -1,4 +1,8 @@
+// styling
 import "./BusinessPage.scss"
+
+// components
+import CategorySection from "../../components/CategorySection/CategorySection"
 
 export default function BusinessPage() {
     return (
@@ -11,6 +15,8 @@ export default function BusinessPage() {
                     You can submit a recommendation by visiting this page. {/* add link later */}
                 </p>
             </div>
+
+            <CategorySection />
         </section>
     )
 }
