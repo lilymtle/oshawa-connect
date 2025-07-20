@@ -1,43 +1,15 @@
 import "./Pill.scss"
 
-interface CategoryProps {
+interface PillProps {
     id: number;
     category: string;
-    emoji: "🏛️" | "🍽️" | "🛍️"
-    backgroundColor: string;
+    style: React.CSSProperties;
 }
 
-export default function Pill() {
-    const categories: CategoryProps[] = [
-        {
-            id: 1,
-            category: "Attractions",
-            emoji: "🏛️",
-            backgroundColor: "#C3E7FA",
-        },
-        {
-            id: 2,
-            category: "Foods & Drinks",
-            emoji: "🏛️",
-            backgroundColor: "#F4E5B5"
-        },
-        {
-            id: 3,
-            category: "Retail",
-            emoji: "🛍️",
-            backgroundColor: "#D6BADA"
-        }
-    ]
-
+export default function Pill({ id, category, style }: PillProps) {
     return (
-        <ul className="category__list">
-            {categories.map((category) => (
-                <div className="pill">
-                    <p className="pill__category">
-                        {category.category}
-                    </p>
-                </div>
-            ))}
-        </ul>
+        <div key={id} className="pill" style={style}>
+            {category}
+        </div>
     )
 }
