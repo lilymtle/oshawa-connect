@@ -2,5 +2,12 @@
 @use "../../styles/partials/variables.scss" as *;
 
 .business {
+    @include flexbox(column);
+    gap: 1rem;
     padding: 1rem;
+
+    &__wrapper {
+        @include flexbox(column);
+        gap: 1rem;
+    }
 }
