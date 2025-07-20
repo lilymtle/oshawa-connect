@@ -1,17 +1,14 @@
 @use "../../styles/partials/mixins.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 
-.category {}
-
 .pill {
     @include flexbox(row);
     align-items: center;
     gap: 1rem;
-    width: fit-content;
-    height: 40px;
+    flex: 0 0 auto;
     border-radius: 20px;
     padding-block: 0.5rem;
-    padding-inline: 1rem;
+    padding-inline: 1rem;    
 
     &__circle {
         background-color: #EEEEEE;
