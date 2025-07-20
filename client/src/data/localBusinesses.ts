@@ -38,7 +38,7 @@ export const localBusinesses: BusinessProps[] = [
         category: "food",
         name: "BanBan Korean Fried Chicken",
         image: `${imagePath}/banban.jpg`,
-        rating: 4.6,
+        rating: 4.7,
         details: {
             address: {
                 street: "20 Athol Street W",
@@ -58,6 +58,7 @@ export const localBusinesses: BusinessProps[] = [
                 "Banban Korean Fried Chicken serves up crispy, flavorful Korean-style fried chicken with a variety of sauces and sides. Known for its perfectly crunchy exterior and juicy meat inside.",
                 "Banban offers a delicious taste of authentic Korean comfort food in a casual, welcoming setting. Whether you're craving classic soy garlic, spicy gochujang, or crispy wings, Banban is a go-to spot for fried chicken lovers."
             ],
+            cuisine: "Asian",
             distance: 1.1,
             priceLevel: 2
         }
