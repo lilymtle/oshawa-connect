@@ -10,6 +10,27 @@
 
 ## Updates
 <details>
+    <summary>July 19, 2025</summary>
+    <ul>
+        <li> 
+            Began working on the Businesses page and populating a file with data
+        </li>
+        <li> 
+            Currently refactoring the Card component to make it more reuseable by utilizing conditional styling and rendering of card content
+        </li>
+        <li> 
+            Created a pill component to help users filter categories on pages
+        </li>
+        <li>
+            Added a utility function to format price level
+        </li>
+        <li>
+            Added a Post-MVP Enhancements section to the README
+        </li>
+    </ul>
+</details>
+
+<details>
     <summary>July 18, 2025</summary>
     <ul>
         <li>
@@ -52,7 +73,7 @@
 - Formspree
 
 ### Hosting
-- TBD
+- <i>Most likely Vercel</i>
 
 ## API
 
@@ -61,3 +82,9 @@ More information later.
 ## Usage
 
 More information later.
+
+## Post-MVP Enhancements
+
+- Switch from static data to dynamic database integration
+- Add user-generated content and submission flow
+- <i>More to be added as I continue to work through this project</i>
