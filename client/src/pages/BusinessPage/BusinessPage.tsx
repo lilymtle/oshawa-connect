@@ -5,8 +5,18 @@ import "./BusinessPage.scss"
 import CategorySection from "../../components/CategorySection/CategorySection"
 import Card from "../../components/Card/Card"
 import { localBusinesses } from "../../data/localBusinesses"
+import { useState } from "react"
 
 export default function BusinessPage() {
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    
+    const handleCategoryClick = (category: string) => {
+        const lowerCaseCategory = category.toLowerCase();
+        setSelectedCategory((prev) => (prev === lowerCaseCategory ? null : lowerCaseCategory))
+    };
+
+    const filteredBusiness = selectedCategory ? localBusinesses.filter((business) => business.category === selectedCategory) : localBusinesses
+
     return (
         <section className="business">
             <div className="business__wrapper">
@@ -18,12 +28,15 @@ export default function BusinessPage() {
                 </p>
             </div>
 
-            <CategorySection />
+            <CategorySection 
+                selectedCategory={selectedCategory}
+                onCategoryClick={handleCategoryClick}
+            />
 
             <section className="business__cards">
                 <ul className="business__cards-list">
-                    {localBusinesses.map((business) => (
-                        <li className="business__list-item">
+                    {filteredBusiness.map((business) => (
+                        <li key={business.id} className="business__list-item">
                             <article className="business__card">
                                 <Card
                                     variant="business"
