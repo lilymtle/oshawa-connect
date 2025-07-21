@@ -10,7 +10,12 @@ import Pill from "../Pill/Pill"
 /* --- data --- */
 import { businessCategories } from "../../data/categoriesList"
 
-export default function CategorySection() {
+interface CategorySectionProps {
+    onCategoryClick: (category: string) => void;
+    selectedCategory?: string | null;
+};
+
+export default function CategorySection({ onCategoryClick, selectedCategory }: CategorySectionProps) {
     return (
         <section className="category">
             <div className="category__wrapper">
@@ -23,12 +28,18 @@ export default function CategorySection() {
             <div className="category__list-wrapper">
                 <ul className="category__list">
                     {businessCategories.map((category) => (
-                        <Pill
-                            id={category.id}
-                            category={category.category}
-                            style={{backgroundColor: `${category.backgroundColor}`}}
-                            emoji={category.emoji}
-                        />
+                        <li key={category.id} className="category__list-item">
+                            <Pill
+                                id={category.id}
+                                category={category.category}
+                                style={{
+                                    backgroundColor: `${category.backgroundColor}`,
+                                }}
+                                emoji={category.emoji}
+                                onClick={() => onCategoryClick(category.category)}
+                                selected={selectedCategory === category.category.toLowerCase()}
+                            />
+                        </li>
                     ))}
                 </ul>
             </div>
