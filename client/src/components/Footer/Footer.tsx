@@ -14,7 +14,7 @@ export default function Footer() {
 
                     <ul className="footer__list">
                         {navLinks.slice(0,4).map((link) => (
-                            <li className="footer__item">
+                            <li key={link.name} className="footer__item">
                                 <Link to={link.path} className="footer__link">
                                     {link.name}
                                 </Link>
@@ -31,7 +31,7 @@ export default function Footer() {
 
                     <ul className="footer__list">
                         {navLinks.slice(4).map((link) => (
-                            <li className="footer__item">
+                            <li key={link.name} className="footer__item">
                                 <Link to={link.path} className="footer__link">
                                     {link.name}
                                 </Link>

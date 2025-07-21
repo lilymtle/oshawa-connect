@@ -67,7 +67,7 @@ export default function HomePage() {
           Each month, Oshawa Connect spotlight a local gem that helps make Oshawa vibrant. 
           Discover the flavour, passion, and community spirit that shape our city.
         </p>
-
+{/* 
         <Card
           className="community-spotlight__card">
           <div className="community-spotlight__details">
@@ -96,7 +96,7 @@ export default function HomePage() {
               <ArrowForwardIcon />
             </section>
           </div>
-        </Card>
+        </Card> */}
       </section>
 
       <section className="home__upcoming-events">
@@ -107,7 +107,7 @@ export default function HomePage() {
           that bring the city together.
         </p>
 
-        <Carousel 
+        {/* <Carousel 
             className="upcoming-events__carousel" 
             dates={upcomingEvents.map((event) => event.date )}
           >
@@ -130,7 +130,7 @@ export default function HomePage() {
                 </Card>
               </li>
             ))}
-        </Carousel>
+        </Carousel> */}
       </section>
     </section>
   )
