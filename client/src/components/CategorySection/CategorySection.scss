@@ -34,6 +34,10 @@
             background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5));
         }
 
+        &-item {
+            flex: 0 0 auto;
+        }
+
         &-wrapper {
             position: relative;
         }
