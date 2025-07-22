@@ -84,7 +84,10 @@
 - PostgreSQL
 
 ### Design & Tools
-- Figma
+- Figma - [view wireframes (WIP)](https://www.figma.com/design/5VLLBchXI1g9p3MSgtnsH7/oshawa-connect-wireframes-preview?node-id=0-1)
+
+    **Note:** These wireframes reflect the current stage of the project and are works in progress. They are designed using a mobile-first approach and will continue to evolve as development progresses.
+
 - Formspree
 
 ### Hosting
