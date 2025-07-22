@@ -10,6 +10,29 @@
 
 ## Updates
 <details>
+    <summary>July 21, 2025</summary>
+    <ul>
+        <li>
+            Fixed a bug where I had duplicates of a business card
+        </li>
+        <li>
+            Created a pagination component and added functionality
+        </li>
+        <li>
+            Created a little util function to capitalize words
+        </li>
+        <li>
+            Polished high-fidelity mockups for the remaining pages: event details, business details, and community resource details
+        </li>
+        <li>
+            Added Figma wireframe preview link to README <em>(see below under Design & Tools for Technologies)</em>
+        </li>
+        <li>
+            Going to take a few days off from working on this project and continue with studying Python. I plan on getting back to this project on the weekend. I gotta balance studying as well! 😊
+        </li>
+</details>
+
+<details>
     <summary>July 20, 2025</summary>
     <ul>
         <li>

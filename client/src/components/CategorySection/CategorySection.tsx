@@ -10,6 +10,10 @@ import Pill from "../Pill/Pill"
 /* --- data --- */
 import { businessCategories } from "../../data/categoriesList"
 
+/* --- util functions --- */
+import capitalizeWords from "../../utils/capitalizeWords";
+
+/* --- types --- */
 interface CategorySectionProps {
     onCategoryClick: (category: string) => void;
     selectedCategory?: string | null;
@@ -19,13 +23,13 @@ export default function CategorySection({ onCategoryClick, selectedCategory }: C
     return (
         <section className="category">
             <div className="category__wrapper">
-                <h3 className="content-heading content-heading--onyx">Category</h3>
+                <h2 className="section-heading">Category</h2>
                 <Link className="category__link" to="/">
                     See all
                 </Link>
             </div>
 
-            <div className="category__list-wrapper">
+            <div className="category__list-wrapper">                
                 <ul className="category__list">
                     {businessCategories.map((category) => (
                         <li key={category.id} className="category__list-item">
@@ -43,6 +47,12 @@ export default function CategorySection({ onCategoryClick, selectedCategory }: C
                         </li>
                     ))}
                 </ul>
+            </div>
+
+            <div className="category__sort">
+                <h3 className="content-heading content-heading--onyx">
+                    {selectedCategory ? capitalizeWords(selectedCategory) : "All Categories"}
+                </h3>
             </div>
         </section>
     )

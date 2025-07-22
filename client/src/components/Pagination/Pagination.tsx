@@ -14,6 +14,7 @@ export default function Pagination({ totalPages, currentPage, prevPage, nextPage
     for (let i = 1; i <= totalPages; i++) {
         pageNumbers.push(i)
     };
+    
 
     return (
         <div className="pagination">
@@ -36,9 +37,14 @@ export default function Pagination({ totalPages, currentPage, prevPage, nextPage
 
             <div className="pagination__pages">
                 {pageNumbers.map((page) => (
-                    <p className={`pagination__page-number ${currentPage ? "active" : ""}`}>
-                        {page}
-                    </p>
+                    <div className={`pagination__circle ${currentPage === page ? "active" : ""}`}>
+                        <p 
+                            key={page}
+                            className="pagination__page-number"
+                        >
+                            {page}
+                        </p>
+                    </div>
                 ))}
             </div>
 
