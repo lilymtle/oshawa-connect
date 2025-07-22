@@ -28,11 +28,13 @@ export default function Header() {
 
     return (
         <header className="header">
-            <img
-                className="logo"
-                src="/assets/images/logo.png"
-                alt="Oshawa Connect logo"
-            />
+            <Link className="header__logo-link" to="/">
+                <img
+                    className="logo"
+                    src="/assets/images/logo.png"
+                    alt="Oshawa Connect logo"
+                />
+            </Link>
 
             <div className="header__mobile-menu">
                 <IconButton onClick={(e) => {

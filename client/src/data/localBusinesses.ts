@@ -278,7 +278,7 @@ export const localBusinesses: BusinessProps[] = [
         }
     },
     {
-        id: 19,
+        id: 10,
         category: "recreation",
         name: "Lakeview Park Beach",
         image: getImagePath("businesses", "recreation", "lakeview-park-beach.jpg"),
@@ -705,7 +705,7 @@ export const localBusinesses: BusinessProps[] = [
         }
     },
     {
-        id: 27,
+        id: 26,
         category: "foods & drinks",
         name: "Spicy Affairs",
         image: getImagePath("businesses", "foods-and-drinks", "spicy-affairs.jpg"),
@@ -734,7 +734,7 @@ export const localBusinesses: BusinessProps[] = [
         }
     },
     {
-        id: 28,
+        id: 27,
         category: "retail",
         name: "Doug Wilson Men's Wear",
         image: getImagePath("businesses", "retail", "doug-wilson-mens-wear.jpg"),
@@ -762,7 +762,7 @@ export const localBusinesses: BusinessProps[] = [
         }
     },
     {
-        id: 29,
+        id: 28,
         category: "foods & drinks",
         name: "Uncle Fluffy",
         image: getImagePath("businesses", "foods-and-drinks", "uncle-fluffy.jpg"),
