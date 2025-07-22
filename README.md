@@ -10,6 +10,21 @@
 
 ## Updates
 <details>
+    <summary>July 20, 2021</summary>
+    <ul>
+        <li>
+            Added 27 local businesses to static data file... <em>I cannot wait until I integrate the database later</em> 🥲
+        </li>
+        <li>
+            Added a "recreation" category
+        </li>
+        <li>
+            Added filtering functionality to pills. Can click through the different categories of local businesses to display filtered businesses
+        </li>
+    </ul>
+</details>
+
+<details>
     <summary>July 19, 2025</summary>
     <ul>
         <li> 
@@ -37,7 +52,7 @@
             Added an "Updates" section to this README. Will be adding updates starting today
         </li>
         <li>
-            Created FAQs page with cards <i>(will need to style them more... they look too plain)</i>
+            Created FAQs page with cards <em>(will need to style them more... they look too plain)</em>
         </li>
         <li> 
             Created FAQs category page that will dynamically display a list of faqs based on the category name and slug
