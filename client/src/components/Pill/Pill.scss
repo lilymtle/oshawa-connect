@@ -6,6 +6,7 @@
     align-items: center;
     gap: 1rem;
     flex: 0 0 auto;
+    border: 2px solid transparent;
     border-radius: 20px;
     padding-block: 0.5rem;
     padding-inline: 1rem;    
@@ -22,5 +23,10 @@
 
     &__emoji {
         font-size: 0.65rem;
+    }
+
+    &--selected {
+        background-color: white !important;
+        transition: 0.3s ease-in-out;
     }
 }

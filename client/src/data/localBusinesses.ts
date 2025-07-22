@@ -35,7 +35,7 @@ const imagePath = "/assets/images/businesses";
 export const localBusinesses: BusinessProps[] = [
     {
         id: 1,
-        category: "food",
+        category: "foods & drinks",
         name: "BanBan Korean Fried Chicken",
         image: `${imagePath}/banban.jpg`,
         rating: 4.7,
