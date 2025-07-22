@@ -1,0 +1,21 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.pagination {
+    @include flexbox(row);
+    justify-content: space-between;
+
+    &__wrapper {
+        @include flexbox(row);
+    }
+
+    &__pages {
+        @include flexbox(row);
+        gap: 1rem;
+    }
+}
+
+.disabled {
+    color: #666;
+}
+
