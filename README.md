@@ -10,7 +10,7 @@
 
 ## Updates
 <details>
-    <summary>July 20, 2021</summary>
+    <summary>July 20, 2025</summary>
     <ul>
         <li>
             Added 27 local businesses to static data file... <em>I cannot wait until I integrate the database later</em> 🥲
