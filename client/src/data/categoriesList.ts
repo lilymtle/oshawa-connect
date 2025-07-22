@@ -1,7 +1,7 @@
 interface CategoryProps {
     id: number;
     category: string;
-    emoji: "🏛️" | "🍽️" | "🛍️"
+    emoji: "🏛️" | "🍽️" | "🎯" | "🛍️"
     color: string;
 }
 
@@ -20,6 +20,12 @@ export const businessCategories: CategoryProps[] = [
         },
         {
             id: 3,
+            category: "Recreation",
+            emoji: "🎯",
+            color: "#B2E2CC"
+        },
+        {
+            id: 4,
             category: "Retail",
             emoji: "🛍️",
             color: "#D6BADA"
