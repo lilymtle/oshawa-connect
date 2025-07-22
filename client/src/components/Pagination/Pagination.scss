@@ -4,6 +4,7 @@
 .pagination {
     @include flexbox(row);
     justify-content: space-between;
+    align-items: center;
 
     &__wrapper {
         @include flexbox(row);
@@ -11,6 +12,8 @@
 
     &__pages {
         @include flexbox(row);
+            align-items: center;
+
         gap: 1rem;
     }
 }
@@ -19,3 +22,12 @@
     color: #666;
 }
 
+.active {
+    background-color: $champagne-gold;
+    width: 30px;
+    height: 30px;
+    @include flexbox(row);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
