@@ -34,6 +34,7 @@ export default function CategorySection({ onCategoryClick, selectedCategory }: C
                                 category={category.category}
                                 style={{
                                     backgroundColor: `${category.backgroundColor}`,
+                                    borderColor: `${category.backgroundColor}`,
                                 }}
                                 emoji={category.emoji}
                                 onClick={() => onCategoryClick(category.category)}
