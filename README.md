@@ -10,7 +10,7 @@
 
 ## Updates
 <details>
-    <summary>July 21, 2025</summary>
+    <summary>July 22, 2025</summary>
     <ul>
         <li>
             Fixed a bug where I had duplicates of a business card
