@@ -1,3 +1,26 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
 .leaflet-container {
     height: 300px;
+}
+
+.leaflet-popup-content {
+    @include flexbox(column);
+    gap: 0.5rem;
+}
+
+.location {
+    &__name, &__street, &__city, &__province, &__postal-code {
+        margin: 0 !important;
+    }
+
+    &__name {
+        font-weight: 600;
+    }
+
+    &__wrapper {
+        @include flexbox(row);
+        gap: 0.25rem;
+    }
 }
