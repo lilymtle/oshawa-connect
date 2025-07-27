@@ -31,4 +31,13 @@
         @include flexbox(column);
         gap: 0.75rem;
     }
+
+    &__description-box {
+        @include flexbox(column);
+        gap: 1rem;
+        border: 1px solid $light-grey;
+        border-radius: .5rem;
+        box-shadow: 4px 4px 8px  rgba(0, 0, 0, 0.08);
+        padding: 1rem;
+    }
 }
