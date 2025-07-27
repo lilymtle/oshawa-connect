@@ -20,6 +20,7 @@ export default function FAQsPage() {
                             <li className="faqs__item">
                                 <Link to={`/faqs/${card.slug}`}>
                                     <Card
+                                        variant="faqs"
                                         key={card.id}
                                         className="faqs__card"
                                     >
