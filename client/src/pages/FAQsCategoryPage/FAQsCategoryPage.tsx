@@ -2,23 +2,17 @@
 import "./FAQsCategoryPage.scss";
 
 /* -- react imports --*/
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 /* --- components --- */
-
 import { Divider } from "@mui/material";
+import BackLink from "../../components/BackLink/BackLink";
 
 /* --- data --- */
 import { FAQsCard, FAQs } from "../../data/faqsData";
 
 export default function FAQsCategoryPage() {
     const { category } = useParams<{ category: string }>();
-    const navigate = useNavigate();
-
-    const handleBackClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-        event.preventDefault();
-        navigate(-1);
-    };
 
     const matchedCategory = FAQsCard.find(
         (card) => card.slug === category
@@ -30,14 +24,7 @@ export default function FAQsCategoryPage() {
 
     return (
         <section className="faqs__category">
-            <a className="faqs__link faqs__link--back" href="#" onClick={handleBackClick}>
-                <img
-                    className="faqs__icon faqs__icon--chevron"
-                    src="/assets/icons/chevron-left.svg"
-                    alt="Left Chevron"
-                />
-                Back
-            </a>
+            <BackLink />
 
             <div className="faqs__wrapper">
                 <h2 className="section-heading">
