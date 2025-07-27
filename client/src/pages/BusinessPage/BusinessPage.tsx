@@ -11,6 +11,7 @@ import { useState } from "react"
 
 /* --- data --- */
 import { localBusinesses } from "../../data/localBusinesses"
+import { Link } from "react-router-dom"
 
 export default function BusinessPage() {
     /* --- pill category navigation --- */
@@ -58,22 +59,24 @@ export default function BusinessPage() {
                 <ul className="business__cards-list">
                     {currentBusinesses.map((business) => (
                         <li key={business.id} className="business__list-item">
-                            <article className="business__card">
-                                <Card
-                                    variant="business"
-                                    className="business__card"
-                                    style={{
-                                        backgroundImage: `url(${business.image})`,
-                                        backgroundSize: "cover"
-                                    }}
-                                    title={business.name}
-                                    category={business.category}
-                                    rating={business.rating}
-                                    cuisine={business.details.cuisine}
-                                    distance={business.details.distance}
-                                    priceLevel={business.details.priceLevel}
-                                />
-                            </article>
+                            <Link to={`/business/${business.id}`}>
+                                <article className="business__card">
+                                    <Card
+                                        variant="business"
+                                        className="business__card"
+                                        style={{
+                                            backgroundImage: `url(${business.image})`,
+                                            backgroundSize: "cover"
+                                        }}
+                                        title={business.name}
+                                        category={business.category}
+                                        rating={business.rating}
+                                        cuisine={business.details.cuisine}
+                                        distance={business.details.distance}
+                                        priceLevel={business.details.priceLevel}
+                                    />
+                                </article>
+                            </Link>
                         </li>
                     ))}
                 </ul>
