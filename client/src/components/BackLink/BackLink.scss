@@ -1,0 +1,17 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.back-link {
+    @include flexbox(row);
+    align-items: center;
+    color: $link;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &__icon {
+        width: 1.25rem;
+        height: auto;
+    }
+}
