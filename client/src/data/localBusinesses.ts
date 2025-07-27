@@ -10,7 +10,7 @@ interface BusinessProps {
     details: BusinessDetailProps;
 }
 
-interface BusinessDetailProps {
+export interface BusinessDetailProps {
     address: BusinessAddressProps;
     hours: BusinessHoursProps[];
     phone?: string;
