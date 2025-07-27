@@ -11,6 +11,7 @@ import FAQsPage from './pages/FAQsPage/FAQsPage'
 import FAQsCategoryPage from './pages/FAQsCategoryPage/FAQsCategoryPage'
 import ContactPage from './pages/ContactPage/ContactPage'
 import BusinessPage from './pages/BusinessPage/BusinessPage'
+import BusinessDetailsPage from './pages/BusinessDetailsPage/BusinessDetailsPage'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/faqs/:category" element={ <FAQsCategoryPage /> } />
           <Route path="/contact" element={ <ContactPage /> } />
           <Route path="/business" element={ <BusinessPage />} />
+          <Route path="/business/:id" element={ <BusinessDetailsPage /> } />
         </Routes>
       </main>
       <Footer />
