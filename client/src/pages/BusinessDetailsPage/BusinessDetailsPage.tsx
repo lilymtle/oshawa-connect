@@ -1,9 +1,16 @@
-/* --- styling --- */
-import { useParams } from "react-router-dom"
-import "./BusinessDetailsPage.scss"
-import StarRating from "../../components/StarRating/StarRating";
-import { BusinessDetailProps, localBusinesses } from "../../data/localBusinesses";
+/* --- components --- */
+import BackLink from "../../components/BackLink/BackLink";
 import Map from "../../components/Map/Map";
+import StarRating from "../../components/StarRating/StarRating";
+
+/* --- data --- */
+import { BusinessDetailProps, localBusinesses } from "../../data/localBusinesses";
+
+/* --- react and react related imports --- */
+import { useParams } from "react-router-dom"
+
+/* --- styling --- */
+import "./BusinessDetailsPage.scss"
 
 export default function BusinessDetailsPage() {
     const { id } = useParams();
@@ -68,13 +75,11 @@ export default function BusinessDetailsPage() {
                 );
             case "description":
                 return (
-                    <>
+                    <div className="business-details__description-box">
                         {detail.description.map((description, index) => (
-                            <div key={index} className="business-details__box">
-                                <p className="business-details__text">{description}</p>
-                            </div>
+                            <p key={index} className="business-details__text">{description}</p>
                         ))}
-                    </>
+                    </div>
                 )
             default:
                 return (
@@ -87,6 +92,8 @@ export default function BusinessDetailsPage() {
 
     return (
         <section className="business-details">
+            <BackLink />
+
             <h2 className="section-heading">{businessDetails?.name}</h2>
             <StarRating rating={businessDetails?.rating ?? 0} />
 
