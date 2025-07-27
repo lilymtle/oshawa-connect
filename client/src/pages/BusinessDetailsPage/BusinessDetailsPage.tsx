@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import "./BusinessDetailsPage.scss"
 import StarRating from "../../components/StarRating/StarRating";
 import { BusinessDetailProps, localBusinesses } from "../../data/localBusinesses";
+import Map from "../../components/Map/Map";
 
 export default function BusinessDetailsPage() {
     const { id } = useParams();
@@ -95,16 +96,26 @@ export default function BusinessDetailsPage() {
                 alt=""
             />
             
-        <ul className="business-details__list">
-            {businessDetailsHeading.map((heading) => (
-                <li key={heading.heading} className="business-details__list-item">
-                    <h3 className="content-heading content-heading--onyx">{heading.emoji} {heading.heading}</h3>
+            <ul className="business-details__list">
+                {businessDetailsHeading.map((heading) => (
+                    <li key={heading.heading} className="business-details__list-item">
+                        <h3 className="content-heading content-heading--onyx">{heading.emoji} {heading.heading}</h3>
 
-                    {renderBusinessDetails(heading.heading.toLowerCase(), businessDetails.details)}
-                </li>
-            ))}
-        </ul>
+                        {renderBusinessDetails(heading.heading.toLowerCase(), businessDetails.details)}
+                    </li>
+                ))}
+            </ul>
 
+            <div className="business-details__map">
+                <Map 
+                    latLon={businessDetails.latLon}
+                    name={businessDetails.name}
+                    street={businessDetails.details.address.street}
+                    city={businessDetails.details.address.city}
+                    province={businessDetails.details.address.province}
+                    postalCode={businessDetails.details.address.postalCode}
+                />
+            </div>
 
         </section>
     )
