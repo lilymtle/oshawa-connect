@@ -1,0 +1,111 @@
+/* --- styling --- */
+import { useParams } from "react-router-dom"
+import "./BusinessDetailsPage.scss"
+import StarRating from "../../components/StarRating/StarRating";
+import { BusinessDetailProps, localBusinesses } from "../../data/localBusinesses";
+
+export default function BusinessDetailsPage() {
+    const { id } = useParams();
+    const businessDetails = localBusinesses.find(business => business.id === Number(id))
+
+    if (!businessDetails || !businessDetails.details) {
+        return <p>Business not found.</p>;
+    }
+
+    const businessDetailsHeading = [
+        {
+            heading: "Address",
+            emoji: "📍",
+        },
+        {
+            heading: "Hours",
+            emoji: "🕒"
+        },
+        {
+            heading: "Phone",
+            emoji: "📞"
+        },
+        {
+            heading: "Website",
+            emoji: "🌐"
+        },
+        {
+            heading: "Description",
+            emoji: "📋"
+        }
+    ];
+
+    const renderBusinessDetails = (key: string, detail: BusinessDetailProps) => {        
+        switch(key) {
+            case "address":
+                return (
+                    <div className="business-details__wrapper">
+                        <p className="business-details__text">{detail.address.street}</p>
+                        <p className="business-details__text">{detail.address.city} {detail.address.province} {detail.address.postalCode}</p>
+                    </div>
+                );
+            case "hours":
+                return (
+                    <>
+                        {detail.hours.map((hour, index) => (
+                            <div className="business-details__wrapper" key={index}>
+                                <p className="business-details__text">{hour.days}</p>
+                                <p className="business-details__text">{hour.time}</p>
+                            </div>
+                        ))}
+                    </>
+                );
+            case "phone":
+                return (
+                    <p className="business-details__text">
+                        {detail.phone}
+                    </p>
+                );
+            case "website":
+                return (
+                    <a className="business-details__link" href={detail.website} target="_blank">{detail.website}</a>
+                );
+            case "description":
+                return (
+                    <>
+                        {detail.description.map((description, index) => (
+                            <div key={index} className="business-details__box">
+                                <p className="business-details__text">{description}</p>
+                            </div>
+                        ))}
+                    </>
+                )
+            default:
+                return (
+                    <p className="business-details__text">
+                        Details not found.
+                    </p>
+                )
+        }
+    }
+
+    return (
+        <section className="business-details">
+            <h2 className="section-heading">{businessDetails?.name}</h2>
+            <StarRating rating={businessDetails?.rating ?? 0} />
+
+            <img
+                className="business-details__image"
+                src={businessDetails?.image}
+                alt=""
+            />
+            
+        <ul className="business-details__list">
+            {businessDetailsHeading.map((heading) => (
+                <li key={heading.heading} className="business-details__list-item">
+                    <h3 className="content-heading content-heading--onyx">{heading.emoji} {heading.heading}</h3>
+
+                    {renderBusinessDetails(heading.heading.toLowerCase(), businessDetails.details)}
+                </li>
+            ))}
+        </ul>
+
+
+        </section>
+    )
+}
