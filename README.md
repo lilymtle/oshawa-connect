@@ -5,10 +5,31 @@
 ## Features
 
 - Connects residents with local events, services, and businesses
+- Interactive map to view business locations (powered by Leaflet & React-Leaflet)
 - Responsive design for mobile, tablet and desktop
 - More features coming soon...
 
 ## Updates
+<details>
+    <summary>July 27, 2025</summary>
+         <ul>
+            <li>
+                Integrated a map using Leaflet and React-Leaflet! Oh goodness - open source is such a life saver! Thank you to the contributors. 🥹
+            </li>
+            <li>
+                Created business details page <em>(shows details related to individual businesses)</em>
+            </li>
+            <li>
+                Updated card component for conditional rendering based on the passed variant prop
+            </li>
+            <li>
+                Updated local businesses data with the location's lattitude and longitude values for map marker
+            </li>
+            <li>Began looking into the Geolocation API. Will need to read its documentation and also best practices re: access to user location data
+            </li>
+         </ul>
+</details>
+
 <details>
     <summary>July 22, 2025</summary>
     <ul>
@@ -112,6 +133,8 @@
     **Note:** These wireframes reflect the current stage of the project and are works in progress. They are designed using a mobile-first approach and will continue to evolve as development progresses.
 
 - Formspree
+
+- Leaflet, React-Leaftlet
 
 ### Hosting
 - <i>Most likely Vercel</i>
