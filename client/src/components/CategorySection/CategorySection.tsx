@@ -16,10 +16,12 @@ import capitalizeWords from "../../utils/capitalizeWords";
 /* --- types --- */
 interface CategorySectionProps {
     onCategoryClick: (category: string) => void;
+    onSortByChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
     selectedCategory?: string | null;
+    sortBy: string | null;
 };
 
-export default function CategorySection({ onCategoryClick, selectedCategory }: CategorySectionProps) {
+export default function CategorySection({ onCategoryClick, onSortByChange, selectedCategory, sortBy }: CategorySectionProps) {
     return (
         <section className="category">
             <div className="category__wrapper">
@@ -57,7 +59,7 @@ export default function CategorySection({ onCategoryClick, selectedCategory }: C
                 <div>
                     <label>
                         Sort by:
-                        <select name="selectedOption">
+                        <select value={sortBy || ""} onChange={onSortByChange} name="selectedOption">
                             <option value="name-asc">Name (A-Z)</option>
                             <option value="name-desc">Name (Z-A)</option>
                             <option value="dist-asc">Distance (Low-High)</option>
