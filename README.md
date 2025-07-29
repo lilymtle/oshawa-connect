@@ -179,7 +179,7 @@
 - Formspree
 
 ### Hosting
-- <i>Most likely Vercel</i>
+- <em>Most likely Vercel</em>
 
 ## API
 
@@ -193,4 +193,4 @@ More information later.
 
 - Switch from static data to dynamic database integration
 - Add user-generated content and submission flow
-- <i>More to be added as I continue to work through this project</i>
+- <em>More to be added as I continue to work through this project</em>
