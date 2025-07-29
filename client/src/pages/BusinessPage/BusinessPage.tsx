@@ -30,7 +30,7 @@ export default function BusinessPage() {
         } catch (error) {
             console.error("Error retrieving distance: ", error)
         }
-    })
+    });
 
     /* --- pill category navigation --- */
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -41,13 +41,35 @@ export default function BusinessPage() {
         setSelectedCategory((prev) => (prev === lowerCaseCategory ? null : lowerCaseCategory))
     };
 
+    /* --- sorting -- */
+    const [sortBy, setSortBy] = useState<string | null>("name-asc");
+
+    const sortedBusinesses = [...filteredBusinesses].sort((a, b) => {
+        switch (sortBy) {
+            case "name-asc":
+                return a.name.localeCompare(b.name);
+            case "name-desc":
+                return b.name.localeCompare(a.name);
+            case "dist-asc":
+                return userCoords ? getDistance(userCoords, a.coordinates) - getDistance(userCoords, b.coordinates): 0;
+            case "dist-desc":
+                return userCoords ? getDistance(userCoords, b.coordinates) - getDistance(userCoords, a.coordinates): 0;
+            default:
+                return 0;
+        }
+    });
+
+    const handleSorting = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setSortBy(e.target.value);
+    };
+
     /* --- pagination --- */
     const postsPerPage: number = 5;
     const totalPages: number = Math.ceil(filteredBusinesses.length / postsPerPage);
     const [currentPage, setCurrentPage] = useState<number>(1);
     const indexOfLastPost: number = currentPage * postsPerPage;
     const indexofFirstPost: number = indexOfLastPost - postsPerPage;
-    const currentBusinesses = filteredBusinesses.slice(indexofFirstPost, indexOfLastPost);
+    const currentBusinesses = sortedBusinesses.slice(indexofFirstPost, indexOfLastPost)
 
     const handlePrev = () => {
         if (currentPage > 1) setCurrentPage((prev) => prev - 1);
@@ -68,9 +90,11 @@ export default function BusinessPage() {
                 </p>
             </div>
 
-            <CategorySection 
-                selectedCategory={selectedCategory}
+            <CategorySection
                 onCategoryClick={handleCategoryClick}
+                onSortByChange={handleSorting}
+                selectedCategory={selectedCategory}
+                sortBy={sortBy}
             />
 
             <section className="business__cards">
@@ -91,7 +115,7 @@ export default function BusinessPage() {
                                         rating={business.rating}
                                         cuisine={business.details.cuisine}
                                         distance={userCoords ?
-                                            parseFloat((getDistance(userCoords, business.coordinates, 0.01) / 1000).toFixed(1))
+                                            parseFloat((getDistance(userCoords, business.coordinates) / 1000).toFixed(1))
                                             : undefined
                                         }
                                         priceLevel={business.details.priceLevel}
