@@ -37,7 +37,7 @@ export default function Card({ variant = "default", className, style, children, 
                             alt="Map pin icon"
                         />
 
-                        <p className="card__distance">{distance}km</p>
+                        <p className="card__distance">{distance} km</p>
                     </span>
 
                     {category === "food" && formatPriceLevel(priceLevel)}
