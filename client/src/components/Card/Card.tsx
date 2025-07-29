@@ -28,7 +28,7 @@ export default function Card({ variant = "default", className, style, children, 
                 <div className="card__rating"><StarRating rating={rating ?? 0} /></div>
 
                 <div className="card__meta">
-                    {category === "food" && <p className="card__cuisine">{cuisine}</p>}
+                    {category === "foods & drinks" && <p className="card__cuisine">{cuisine}</p>}
                     
                     <span className="card__distance-wrapper">
                         <img 
