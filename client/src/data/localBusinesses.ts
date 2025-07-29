@@ -6,7 +6,7 @@ interface BusinessProps {
     name: string;
     image: string;
     rating: number;
-    latLon: [number, number]; // latitude and longitude
+    coordinates: {latitude: number, longitude: number};
     details: BusinessDetailProps;
 }
 
@@ -41,7 +41,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "BanBan Korean Fried Chicken",
         image: getImagePath("businesses", "foods-and-drinks", "banban.jpg"),
         rating: 4.7,
-        latLon: [43.89680, -78.86402],
+        coordinates: {latitude: 43.89680, longitude: -78.86402},
         details: {
             address: {
                 street: "20 Athol Street W",
@@ -72,7 +72,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "NEB's Fun World",
         image: getImagePath("businesses", "attractions", "nebs.jpg"),
         rating: 4.5,
-        latLon: [43.93556, -78.85896],
+        coordinates: { latitude: 43.93556, longitude: -78.85896},
         details: {
             address: {
                 street: "1300 Wilson Rd N",
@@ -99,7 +99,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Canadian Automotive Museum",
         image: getImagePath("businesses", "attractions", "canadian-automotive-museumn.jpg"),
         rating: 4.5,
-        latLon: [43.895124328773306, -78.86149945765962],
+        coordinates: {latitude: 43.895124328773306, longitude: -78.86149945765962},
         details: {
             address: {
                 street: "99 Simcoe St S",
@@ -126,7 +126,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "The Robert McLaughlin Gallery",
         image: getImagePath("businesses", "attractions", "robert-mclaughlin-gallery.jpg"),
         rating: 4.6,
-        latLon: [43.895083078245555, -78.86545571533172],
+        coordinates: {latitude: 43.895083078245555, longitude: -78.86545571533172},
         details: {
             address: {
                 street: "72 Queen St",
@@ -153,7 +153,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Brew Wizards",
         image: getImagePath("businesses", "foods-and-drinks", "brew-wizards.jpg"),
         rating: 4.7,
-        latLon: [43.89600931769849, -78.86097622195233],
+        coordinates: {latitude: 43.89600931769849, longitude: -78.86097622195233},
         details: {
             address: {
                 street: "74 Celina St",
@@ -183,7 +183,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Karèza Café",
         image: getImagePath("businesses", "foods-and-drinks", "kareza-cafe.jpg"),
         rating: 4.5,
-        latLon: [43.895284646605944, -78.86343882697116],
+        coordinates: {latitude: 43.895284646605944, longitude: -78.86343882697116},
         details: {
             address: {
                 street: "27 Debwewin Miikan",
@@ -212,7 +212,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Midami Sushi",
         image: getImagePath("businesses", "foods-and-drinks", "midami-sushi.jpg"),
         rating: 4.8,
-        latLon: [43.932810661695704, -78.87767386929825],
+        coordinates: {latitude: 43.932810661695704, longitude: -78.87767386929825},
         details: {
             address: {
                 street: "7 Taunton Rd E",
@@ -240,7 +240,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Parkwood National Historic Site",
         image: getImagePath("businesses", "attractions", "parkwood-national-historic-site.jpg"),
         rating: 4.6,
-        latLon: [43.9048955923144, -78.86670407115119],
+        coordinates: {latitude: 43.9048955923144, longitude: -78.86670407115119},
         details: {
             address: {
                 street: "270 Simcoe St N",
@@ -267,7 +267,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Oshawa Valley Botanical Gardens",
         image: getImagePath("businesses", "attractions", "oshawa-valley-botanical-gardens.jpg"),
         rating: 4.6,
-        latLon: [43.900736495392536, -78.86898162115105],
+        coordinates: {latitude: 43.900736495392536, longitude: -78.86898162115105},
         details: {
             address: {
                 street: "155 Arena St",
@@ -293,7 +293,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Lakeview Park Beach",
         image: getImagePath("businesses", "recreation", "lakeview-park-beach.jpg"),
         rating: 4.6,
-        latLon: [43.864977898662424, -78.82381339866137],
+        coordinates: {latitude: 43.864977898662424, longitude: -78.82381339866137},
         details: {
             address: {
                 street: "1675 Simcoe St S",
@@ -318,7 +318,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "The 3D Shoppe",
         image: getImagePath("businesses", "retail", "the-3d-shoppe.jpg"),
         rating: 5,
-        latLon: [43.8974575534378, -78.86596637670839],
+        coordinates: {latitude: 43.8974575534378, longitude: -78.86596637670839},
         details: {
             address: {
                 street: "74 King St W",
@@ -345,7 +345,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Addictive Hobbies & Games",
         image: getImagePath("businesses", "retail", "addictive-hobbies-and-games.jpg"),
         rating: 5,
-        latLon: [43.8974575534378, -78.86596637670839],
+        coordinates: {latitude: 43.8974575534378, longitude: -78.86596637670839},
         details: {
             address: {
                 street: "13 King St W",
@@ -374,7 +374,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Ayothaya",
         image: getImagePath("businesses", "foods-and-drinks", "ayothaya.jpg"),
         rating: 4.5,
-        latLon: [43.9363858863969, -78.86725342697041],
+        coordinates: {latitude: 43.9363858863969, longitude: -78.86725342697041},
         details: {
             address: {
                 street: "300 Taunton Rd E",
@@ -401,7 +401,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Berry Hill Food Co.",
         image: getImagePath("businesses", "foods-and-drinks", "berry-hill-food-co.jpg"),
         rating: 4.5,
-        latLon: [43.89714193007639, -78.86603102697117],
+        coordinates: {latitude: 43.89714193007639, longitude: -78.86603102697117},
         details: {
             address: {
                 street: "82 King St W",
@@ -431,7 +431,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "FRÈRE DU NORD",
         image: getImagePath("businesses", "retail", "frere-du-nord.jpg"),
         rating: 5,
-        latLon: [43.89882028039601, -78.86452329020018],
+        coordinates: {latitude: 43.89882028039601, longitude: -78.86452329020018},
         details: {
             address: {
                 street: "45 Prince St",
@@ -459,7 +459,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Wilson Furniture",
         image: getImagePath("businesses", "retail", "wilson-furniture.jpg"),
         rating: 4.2,
-        latLon: [43.89789168819967, -78.8654678912639],
+        coordinates: {latitude: 43.89789168819967, longitude: -78.8654678912639},
         details: {
             address: {
                 street: "20 Centre St N",
@@ -487,7 +487,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "G.A.M.E.S",
         image: getImagePath("businesses", "retail", "games.jpg"),
         rating: 4.3,
-        latLon: [43.928660237311014, -78.87701628834716],
+        coordinates: {latitude: 43.928660237311014, longitude: -78.87701628834716},
         details: {
             address: {
                 street: "1180 Simcoe St N",
@@ -515,7 +515,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Rainbow Sushi",
         image: getImagePath("businesses", "foods-and-drinks", "rainbow-sushi.jpg"),
         rating: 4.2,
-        latLon: [43.92880068301918, -78.87717415951118],
+        coordinates: {latitude: 43.92880068301918, longitude: -78.87717415951118},
         details: {
             address: {
                 street: "1180 Simcoe St E",
@@ -542,7 +542,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Pho Vietnam 999",
         image: getImagePath("businesses", "foods-and-drinks", "pho-vietnam-999.jpg"),
         rating: 4.4,
-        latLon: [43.89476807631895, -78.87405845819765],
+        coordinates: {latitude: 43.89476807631895, longitude: -78.87405845819765},
         details: {
             address: {
                 street: "299 King St W",
@@ -570,7 +570,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "McLaughlin Bay Wildlife Reserve",
         image: getImagePath("businesses", "recreation", "mclaughlin-bay-wildlife-reserve.jpg"),
         rating: 4.6,
-        latLon: [43.87502057996378, -78.80173012088909],
+        coordinates: {latitude: 43.87502057996378, longitude: -78.80173012088909},
         details: {
             address: {
                 street: "1908 Colonel Sam Dr",
@@ -594,7 +594,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "MATHILDA's",
         image: getImagePath("businesses", "foods-and-drinks", "mathildas.jpg"),
         rating: 5,
-        latLon: [43.89690619063076, -78.8624599698372],
+        coordinates: {latitude: 43.89690619063076, longitude: -78.8624599698372},
         details: {
             address: {
                 street: "29 Simcoe St S",
@@ -623,7 +623,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Cork & Bean",
         image: getImagePath("businesses", "foods-and-drinks", "cork-and-bean.jpg"),
         rating: 4.6,
-        latLon: [43.89796532815222, -78.86342820183978],
+        coordinates: {latitude: 43.89796532815222, longitude: -78.86342820183978},
         details: {
             address: {
                 street: "8 Sincoe St N",
@@ -653,7 +653,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Treetop Eco-Adventure Park",
         image: getImagePath("businesses", "recreation", "treetop-eco-adventure-park.jpg"),
         rating: 4.6,
-        latLon: [44.024022276926146, -78.92888193199964],
+        coordinates: {latitude: 44.024022276926146, longitude: -78.92888193199964},
         details: {
             address: {
                 street: "53 Snow Ridge Ct",
@@ -679,7 +679,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Purple Woods Conservation Area",
         image: getImagePath("businesses", "recreation", "purple-woods-conservation-area.jpg"),
         rating: 4.5,
-        latLon: [44.03564238849527, -78.91728601347626],
+        coordinates: {latitude: 44.03564238849527, longitude: -78.91728601347626},
         details: {
             address: {
                 street: "38 Coates Rd E",
@@ -705,7 +705,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Avanti Trattoria",
         image: getImagePath("businesses", "foods-and-drinks", "avanti-trattoria.jpg"),
         rating: 4.5,
-        latLon: [43.89777739055635, -78.86241667485604],
+        coordinates: {latitude: 43.89777739055635, longitude: -78.86241667485604},
         details: {
             address: {
                 street: "17 King St E",
@@ -736,7 +736,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Spicy Affairs",
         image: getImagePath("businesses", "foods-and-drinks", "spicy-affairs.jpg"),
         rating: 4.2,
-        latLon: [43.89713525900057, -78.8659147201],
+        coordinates: {latitude: 43.89713525900057, longitude: -78.8659147201},
         details: {
             address: {
                 street: "84 King St W",
@@ -766,7 +766,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Doug Wilson Men's Wear",
         image: getImagePath("businesses", "retail", "doug-wilson-mens-wear.jpg"),
         rating: 4.7,
-        latLon: [43.89717612317941, -78.86291978649548],
+        coordinates: {latitude: 43.89717612317941, longitude: -78.86291978649548},
         details: {
             address: {
                 street: "18 Simcoe St S",
@@ -795,7 +795,7 @@ export const localBusinesses: BusinessProps[] = [
         name: "Uncle Fluffy",
         image: getImagePath("businesses", "foods-and-drinks", "uncle-fluffy.jpg"),
         rating: 4.6,
-        latLon: [43.897407305347414, -78.8639656343804],
+        coordinates: {latitude: 43.897407305347414, longitude: -78.8639656343804},
         details: {
             address: {
                 street: "17 King St W",
