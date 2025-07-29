@@ -1,8 +1,8 @@
-export default function getLocation(): Promise<[number, number]> {
+export default function getLocation(): Promise<{latitude: number, longitude: number}> {
     return new Promise((resolve, reject) => {
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition((position) => {
-                resolve([position.coords.latitude, position.coords.longitude]);
+                resolve({latitude: position.coords.latitude, longitude: position.coords.longitude});
             },
             (error) => {
                 reject("Error retrieving user location:" + error.message);
