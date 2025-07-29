@@ -6,9 +6,16 @@
     gap: 1rem;
 
     &__wrapper {
-        @include flexbox(row);
-        justify-content: space-between;
-        align-items: center;
+        &--row {
+            @include flexbox(row);
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &--column {
+            @include flexbox(column);
+            gap: 1rem;
+        }
     }
 
     &__list {
@@ -40,6 +47,34 @@
 
         &-wrapper {
             position: relative;
+        }
+    }
+
+    &__sorting {
+        @include flexbox(row);
+        align-items: center;
+        gap: 1rem;
+
+        &-wrapper {
+            display: inline-block;
+            position: relative;
+
+            &::after {
+                content: url("/assets/icons/arrow-dropdown.svg");
+                position: absolute;
+                top: 15%;
+                right: 0.5rem;
+                pointer-events: none;
+            }
+        }
+
+        &-menu {
+            flex-grow: 1;
+            font-family: $secondary-font;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            appearance: none;
+            border-radius: 20px;
         }
     }
 }
