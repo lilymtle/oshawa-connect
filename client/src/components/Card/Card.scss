@@ -36,6 +36,7 @@
     &__meta {
         @include flexbox(row);
         justify-content: space-between;
+        align-items: center;
     }
 
     &__distance {
@@ -47,11 +48,11 @@
 
     &__icon {
         &--map-pin {
-            width: 1.1875rem;
+            width: 1.125rem;
         }
 
         &--arrow-right {
-            width: 1.4375rem;
+            width: 1.25rem;
         }
     }
 
