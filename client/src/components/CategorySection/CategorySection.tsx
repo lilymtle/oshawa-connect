@@ -24,7 +24,7 @@ interface CategorySectionProps {
 export default function CategorySection({ onCategoryClick, onSortByChange, selectedCategory, sortBy }: CategorySectionProps) {
     return (
         <section className="category">
-            <div className="category__wrapper">
+            <div className="category__wrapper--row">
                 <h2 className="section-heading">Category</h2>
                 <Link className="category__link" to="/">
                     See all
@@ -51,15 +51,15 @@ export default function CategorySection({ onCategoryClick, onSortByChange, selec
                 </ul>
             </div>
 
-            <div className="category__sort">
+            <div className="category__wrapper--column">
                 <h3 className="content-heading content-heading--onyx">
                     {selectedCategory ? capitalizeWords(selectedCategory) : "All Categories"}
                 </h3>
-
-                <div>
-                    <label>
+                
+                <div className="category__sorting-wrapper">
+                    <label className="category__sorting" htmlFor="sort-select">
                         Sort by:
-                        <select value={sortBy || ""} onChange={onSortByChange} name="selectedOption">
+                        <select id="sort-select" value={sortBy || ""} onChange={onSortByChange} name="selectedOption" className="category__sorting-menu">
                             <option value="name-asc">Name (A-Z)</option>
                             <option value="name-desc">Name (Z-A)</option>
                             <option value="dist-asc">Distance (Low-High)</option>
@@ -67,7 +67,7 @@ export default function CategorySection({ onCategoryClick, onSortByChange, selec
                         </select>
                     </label>
                 </div>
-            </div>
+        </div>
         </section>
     )
 }
