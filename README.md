@@ -1,15 +1,42 @@
 # Oshawa Connect
 
-*🚧 This README is under construction and will be updated periodically.* 
+*This README is under construction and will be updated periodically.* 
 
 ## Features
 
-- Connects residents with local events, services, and businesses
-- Interactive map to view business locations (powered by Leaflet & React-Leaflet)
-- Responsive design for mobile, tablet and desktop
-- More features coming soon...
+- 🏘️ Connects residents with local events, services, and businesses in their area  
+- 📍 Displays business locations on an interactive map using markers (powered by Leaflet & React-Leaflet)  
+- 📐 Shows the distance from the user to each business based on geolocation  
+- 🔃 Sort businesses by name or distance (ascending or descending)  
+- 📱 Fully responsive design for mobile, tablet, and desktop  
+- 🚧 More features coming soon...
+
 
 ## Updates
+<details>
+    <summary>July 29, 2025</summary>
+        <ul>
+            <li>
+                Decided not to take a break today because I wanted to try using geolib after reading its documentation!
+            </li>
+            <li>
+                Replaced <code>latLon: [number, number]</code> in my static data file with <code>coordinates: {latitude: number, longitude: number}</code> for readability
+            </li>
+            <li>
+                Utilized geolib to calculate the distance between a user's coordinates and the businesses' coordinates, and then displaying this on the business card
+            </li>
+            <li>
+                Learned something new today: <code>toFixed()</code>, which rounds a number to a specified number of decimal places and returns a string. Keep in mind you'll need to convert it back to a number if you're doing math with it
+            </li>
+            <li>
+                Deleted <code>distance</code> property from the static date file <em>(it was just a placeholder as I worked on the UI)</em>
+            </li>
+            <li>
+                Added sorting feature. Can sort businesses by name and distance in ascending or descending order
+            </li>
+        </ul>
+</details>
+
 <details>
     <summary>July 28, 2025</summary>
     <ul>
@@ -133,6 +160,9 @@
 - SCSS/SASS
 - Materiual UI (MUI)
 - Motion
+- Leaflet & React-Leaflet
+- Geolocation API
+- Geolib
 
 ### Backend
 - Python
@@ -147,8 +177,6 @@
     **Note:** These wireframes reflect the current stage of the project and are works in progress. They are designed using a mobile-first approach and will continue to evolve as development progresses.
 
 - Formspree
-
-- Leaflet, React-Leaftlet
 
 ### Hosting
 - <i>Most likely Vercel</i>
