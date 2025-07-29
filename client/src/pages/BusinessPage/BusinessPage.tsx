@@ -1,21 +1,37 @@
-/* --- styling --- */
-import "./BusinessPage.scss"
-
 /* --- components --- */
-import CategorySection from "../../components/CategorySection/CategorySection"
 import Card from "../../components/Card/Card"
+import CategorySection from "../../components/CategorySection/CategorySection"
 import Pagination from "../../components/Pagination/Pagination"
-
-/* --- react and react related imports --- */
-import { useEffect, useState } from "react"
 
 /* --- data --- */
 import { localBusinesses } from "../../data/localBusinesses"
-import { Link } from "react-router-dom"
+
+/* --- react and external libraries --- */
 import { getDistance } from "geolib"
+import { Link } from "react-router-dom"
+import { useEffect, useState } from "react"
+
+/* --- styling --- */
+import "./BusinessPage.scss"
+
+/* --- utils --- */
 import getLocation from "../../utils/getLocation"
 
 export default function BusinessPage() {
+    /* --- geolocation  --- */
+    const [userCoords, setUserCoords] = useState<{latitude: number, longitude: number} | null>(null);
+
+    useEffect(() => {
+        try {
+            getLocation()
+                .then((coords) => {
+                    setUserCoords(coords);
+                })
+        } catch (error) {
+            console.error("Error retrieving distance: ", error)
+        }
+    })
+
     /* --- pill category navigation --- */
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const filteredBusinesses = selectedCategory ? localBusinesses.filter((business) => business.category === selectedCategory) : localBusinesses
@@ -40,25 +56,6 @@ export default function BusinessPage() {
     const handleNext = () => {
         if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
     };
-
-    const [userCoords, setUserCoords] = useState<[number, number] | null>(null);
-    const userCoordsObj = userCoords ? { latitude: userCoords[0], longitude: userCoords[1] } : null;
-
-    useEffect(() => {
-        getLocation()
-            .then(([latitude, longitude]) => {
-                setUserCoords([latitude, longitude])
-            })
-            .catch(error => {
-                console.error("Error retrieving location:", error)
-            })
-    }, []);
-    
-    for(let i = 0; i < localBusinesses.length; i++) {
-        getDistance(
-            
-        )
-    }
 
     return (
         <section className="business">
@@ -93,7 +90,10 @@ export default function BusinessPage() {
                                         category={business.category}
                                         rating={business.rating}
                                         cuisine={business.details.cuisine}
-                                        distance={2}
+                                        distance={userCoords ?
+                                            parseFloat((getDistance(userCoords, business.coordinates, 0.01) / 1000).toFixed(1))
+                                            : undefined
+                                        }
                                         priceLevel={business.details.priceLevel}
                                     />
                                 </article>
