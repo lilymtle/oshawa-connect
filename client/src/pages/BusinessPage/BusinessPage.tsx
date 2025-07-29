@@ -7,11 +7,13 @@ import Card from "../../components/Card/Card"
 import Pagination from "../../components/Pagination/Pagination"
 
 /* --- react and react related imports --- */
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 /* --- data --- */
 import { localBusinesses } from "../../data/localBusinesses"
 import { Link } from "react-router-dom"
+import { getDistance } from "geolib"
+import getLocation from "../../utils/getLocation"
 
 export default function BusinessPage() {
     /* --- pill category navigation --- */
@@ -38,6 +40,25 @@ export default function BusinessPage() {
     const handleNext = () => {
         if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
     };
+
+    const [userCoords, setUserCoords] = useState<[number, number] | null>(null);
+    const userCoordsObj = userCoords ? { latitude: userCoords[0], longitude: userCoords[1] } : null;
+
+    useEffect(() => {
+        getLocation()
+            .then(([latitude, longitude]) => {
+                setUserCoords([latitude, longitude])
+            })
+            .catch(error => {
+                console.error("Error retrieving location:", error)
+            })
+    }, []);
+    
+    for(let i = 0; i < localBusinesses.length; i++) {
+        getDistance(
+            
+        )
+    }
 
     return (
         <section className="business">
@@ -72,7 +93,7 @@ export default function BusinessPage() {
                                         category={business.category}
                                         rating={business.rating}
                                         cuisine={business.details.cuisine}
-                                        distance={business.details.distance}
+                                        distance={2}
                                         priceLevel={business.details.priceLevel}
                                     />
                                 </article>

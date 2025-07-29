@@ -11,23 +11,37 @@
 
 ## Updates
 <details>
+    <summary>July 28, 2025</summary>
+    <ul>
+        <li>
+            Integrated Geolocation API to grab a user's current location
+        </li>
+        <li>
+            Looked into using geolib to calculate the distance between a user's location + a business. Still going through the documentation!
+        </li>
+        <li>
+            Feeling really tired these last few days, so I will probably redirect my energy into learning Python and engaging in self-care activities. Will return to this project in a few days and hopefully implement a filtering feature 😅
+        </li>
+    </ul>
+</details>
+<details>
     <summary>July 27, 2025</summary>
-         <ul>
-            <li>
-                Integrated a map using Leaflet and React-Leaflet! Oh goodness - open source is such a life saver! Thank you to the contributors. 🥹
-            </li>
-            <li>
-                Created business details page <em>(shows details related to individual businesses)</em>
-            </li>
-            <li>
-                Updated card component for conditional rendering based on the passed variant prop
-            </li>
-            <li>
-                Updated local businesses data with the location's lattitude and longitude values for map marker
-            </li>
-            <li>Began looking into the Geolocation API. Will need to read its documentation and also best practices re: access to user location data
-            </li>
-         </ul>
+    <ul>
+        <li>
+            Integrated a map using Leaflet and React-Leaflet! Oh goodness - open source is such a life saver! Thank you to the contributors. 🥹
+        </li>
+        <li>
+            Created business details page <em>(shows details related to individual businesses)</em>
+        </li>
+        <li>
+            Updated card component for conditional rendering based on the passed variant prop
+        </li>
+        <li>
+            Updated local businesses data with the location's lattitude and longitude values for map marker
+        </li>
+        <li>Began looking into the Geolocation API. Will need to read its documentation and also best practices re: access to user location data
+        </li>
+    </ul>
 </details>
 
 <details>
