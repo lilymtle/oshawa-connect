@@ -53,6 +53,18 @@ export default function CategorySection({ onCategoryClick, selectedCategory }: C
                 <h3 className="content-heading content-heading--onyx">
                     {selectedCategory ? capitalizeWords(selectedCategory) : "All Categories"}
                 </h3>
+
+                <div>
+                    <label>
+                        Sort by:
+                        <select name="selectedOption">
+                            <option value="name-asc">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                            <option value="dist-asc">Distance (Low-High)</option>
+                            <option value="dist-desc">Distance (High-Low)</option>
+                        </select>
+                    </label>
+                </div>
             </div>
         </section>
     )
