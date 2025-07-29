@@ -6,13 +6,13 @@
 .card {   
     border: .0625rem solid #F0F0F0;
     border-radius: 1.25rem;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 8px #c2c1c1;
     padding: 1rem;
 
     @include tablet {
         padding: 2rem;
     }
-
+    
     &__heading {
         font-size: 1.125rem;
         color: $charcoal-blue;
@@ -53,6 +53,15 @@
 
         &--arrow-right {
             width: 1.25rem;
+        }
+    }
+
+    &--event, &--business, &--resource {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        will-change: transform;
+
+        &:hover {
+        transform: scale(1.015);
         }
     }
 
