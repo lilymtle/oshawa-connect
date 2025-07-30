@@ -1,5 +1,7 @@
 # Oshawa Connect
 
+![A person holding a mobile phone displaying Oshawa Connect's Business page. Has navigation for categories such as Attractions and Food & Drinks](images/mobile-mockup.png)
+
 *This README is under construction and will be updated periodically.* 
 
 ## Features
