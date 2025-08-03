@@ -18,7 +18,7 @@ _This README is under construction and will be updated periodically._
 <details>
     <summary>☀️ August 2025</summary>
         <details>
-        <summary><strong>August 2, 2025</strong></summary>
+        <summary>August 2, 2025</summary>
         <ul>
             <li>
                 Used a mockup generator to showcase a glimpse of Oshawa Connect in mobile. Once I am done designing and building in mobile, I'll work on the other breakpoints. 🙂
@@ -33,9 +33,8 @@ _This README is under construction and will be updated periodically._
 <details>
     <summary>🌱 July 2025</summary>
         <details>
-            <summary><strong>July 29, 2025</strong></summary>
-                <blockquote>
-                    <ul>
+            <summary>July 29, 2025</summary>
+                <ul>
                     <li>
                         Decided not to take a break today because I wanted to try using geolib after reading its documentation!
                     </li>
@@ -55,10 +54,9 @@ _This README is under construction and will be updated periodically._
                         Added sorting feature. Can sort businesses by name and distance in ascending or descending order
                     </li>
                 </ul>
-                </blockquote>
         </details>
         <details>
-            <summary><strong>July 28, 2025</strong></summary>
+            <summary>July 28, 2025</summary>
             <ul>
                 <li>
                     Integrated Geolocation API to grab a user's current location
@@ -72,7 +70,7 @@ _This README is under construction and will be updated periodically._
             </ul>
         </details>
         <details>
-            <summary><strong>July 27, 2025</strong></summary>
+            <summary>July 27, 2025</summary>
             <ul>
                 <li>
                     Integrated a map using Leaflet and React-Leaflet! Oh goodness - open source is such a life saver! Thank you to the contributors. 🥹
@@ -91,7 +89,7 @@ _This README is under construction and will be updated periodically._
             </ul>
         </details>
         <details>
-            <summary><strong>July 22, 2025</strong></summary>
+            <summary>July 22, 2025</summary>
             <ul>
                 <li>
                     Fixed a bug where I had duplicates of a business card
@@ -113,7 +111,7 @@ _This README is under construction and will be updated periodically._
                 </li>
         </details>
         <details>
-            <summary><strong>July 20, 2025</strong></summary>
+            <summary>July 20, 2025</summary>
             <ul>
                 <li>
                     Added 27 local businesses to static data file... <em>I cannot wait until I integrate the database later</em> 🥲
@@ -127,7 +125,7 @@ _This README is under construction and will be updated periodically._
             </ul>
         </details>
         <details>
-            <summary><strong>July 19, 2025</strong></summary>
+            <summary>July 19, 2025</summary>
             <ul>
                 <li> 
                     Began working on the Businesses page and populating a file with data
@@ -147,7 +145,7 @@ _This README is under construction and will be updated periodically._
             </ul>
         </details>
         <details>
-            <summary><strong>July 18, 2025</strong></summary>
+            <summary>July 18, 2025</summary>
             <ul>
                 <li>
                     Added an "Updates" section to this README. Will be adding updates starting today
