@@ -55,7 +55,6 @@
                 </li>
             </ul>
     </details>
-
     <details>
         <summary>July 28, 2025</summary>
         <ul>
@@ -89,7 +88,6 @@
             </li>
         </ul>
     </details>
-
     <details>
         <summary>July 22, 2025</summary>
         <ul>
@@ -112,7 +110,6 @@
                 Going to take a few days off from working on this project and continue with studying Python. I plan on getting back to this project on the weekend. I gotta balance studying as well! 😊
             </li>
     </details>
-
     <details>
         <summary>July 20, 2025</summary>
         <ul>
@@ -127,7 +124,6 @@
             </li>
         </ul>
     </details>
-
     <details>
         <summary>July 19, 2025</summary>
         <ul>
@@ -148,7 +144,6 @@
             </li>
         </ul>
     </details>
-
     <details>
         <summary>July 18, 2025</summary>
         <ul>
