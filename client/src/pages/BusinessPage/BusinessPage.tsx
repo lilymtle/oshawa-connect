@@ -4,6 +4,7 @@ import CategorySection from "../../components/CategorySection/CategorySection"
 import Pagination from "../../components/Pagination/Pagination"
 
 /* --- data --- */
+import { businessCategories } from "../../data/categoriesList"
 import { localBusinesses } from "../../data/localBusinesses"
 
 /* --- react and external libraries --- */
@@ -91,6 +92,7 @@ export default function BusinessPage() {
             </div>
 
             <CategorySection
+                categories={businessCategories}
                 onCategoryClick={handleCategoryClick}
                 onSortByChange={handleSorting}
                 selectedCategory={selectedCategory}
