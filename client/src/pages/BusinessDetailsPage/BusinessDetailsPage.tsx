@@ -115,7 +115,7 @@ export default function BusinessDetailsPage() {
 
             <div className="business-details__map">
                 <Map 
-                    latLon={businessDetails.latLon}
+                    coordinates={businessDetails.coordinates}
                     name={businessDetails.name}
                     street={businessDetails.details.address.street}
                     city={businessDetails.details.address.city}
