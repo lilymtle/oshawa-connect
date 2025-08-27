@@ -21,7 +21,7 @@ _This README is under construction and will be updated periodically._
             <summary>August 27, 2025</summary>
             <ul>
                 <li>
-                    I am back! I took a bit of a break after I finished studying a two weeks ago. If you're reading this, I want to remind you that it's okay to take a break and that your mental health and wellness are super important.
+                    I am back! I took a bit of a break after I finished studying about two weeks ago. If you're reading this, I want to remind you that it's okay to take a break and that your mental health and wellness are super important.
                 </li>
                 <li>
                     Updated the business data and Map component so that the key names match Leaflet's LatLngExpression.
@@ -31,6 +31,9 @@ _This README is under construction and will be updated periodically._
                 </li>
                 <li>
                     Changed the category section component to accept a prop for categories. Since this component will be on three different pages with unique categories, it was important for me to make sure the component reuseable.
+                </li>
+                <li>
+                    Tomorrow I will focus on populating a list of data for community resources, and then hopefully finish the Community Resources page.
                 </li>
             </ul>
         </details>
