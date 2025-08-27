@@ -1,8 +1,7 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
-// basic unviersal card styling
-
+/* --- basic unviersal card styling --- */
 .card {   
     border: .0625rem solid #F0F0F0;
     border-radius: 1.25rem;
@@ -56,6 +55,7 @@
         }
     }
 
+    /* --- variant (event, business, resource) card styling --- */
     &--event, &--business, &--resource {
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
         will-change: transform;
