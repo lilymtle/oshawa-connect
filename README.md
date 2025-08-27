@@ -18,15 +18,32 @@ _This README is under construction and will be updated periodically._
 <details>
     <summary>☀️ August 2025</summary>
         <details>
-        <summary>August 2, 2025</summary>
-        <ul>
-            <li>
-                Used a mockup generator to showcase a glimpse of Oshawa Connect in mobile. Once I am done designing and building in mobile, I'll work on the other breakpoints. 🙂
-            </li>
-            <li>
-                Unfortunately I won't have the time to do much work on my project this weekend since I am studying for something important right now. Once I finish that, I will continue with this project.
-            </li>
-        </ul>
+            <summary>August 27, 2025</summary>
+            <ul>
+                <li>
+                    I am back! I took a bit of a break after I finished studying a two weeks ago. If you're reading this, I want to remind you that it's okay to take a break and that your mental health and wellness are super important.
+                </li>
+                <li>
+                    Updated the business data and Map component so that the key names match Leaflet's LatLngExpression.
+                </li>
+                <li>
+                    Created Community Resources page. Added the page's section heading and description, as well as the category section component.
+                </li>
+                <li>
+                    Changed the category section component to accept a prop for categories. Since this component will be on three different pages with unique categories, it was important for me to make sure the component reuseable.
+                </li>
+            </ul>
+        </details>
+        <details>
+            <summary>August 2, 2025</summary>
+            <ul>
+                <li>
+                    Used a mockup generator to showcase a glimpse of Oshawa Connect in mobile. Once I am done designing and building in mobile, I'll work on the other breakpoints. 🙂
+                </li>
+                <li>
+                    Unfortunately I won't have the time to do much work on my project this weekend since I am studying for something important right now. Once I finish that, I will continue with this project.
+                </li>
+            </ul>
         </details>
 </details>
 
