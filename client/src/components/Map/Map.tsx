@@ -6,7 +6,7 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
 
 interface MapProps {
-    latLon: [number, number];
+    coordinates: {lat: number, lng: number};
     name: string;
     street: string;
     city: string;
@@ -14,16 +14,14 @@ interface MapProps {
     postalCode: string;
 }
 
-export default function Map({ latLon, name, street, city, province, postalCode }: MapProps) {
-    // const currentPosition: [number, number] = [43.6532, -79.3832]
-
+export default function Map({ coordinates, name, street, city, province, postalCode }: MapProps) {
     return (
-        <MapContainer center={latLon} zoom={15} scrollWheelZoom={false}>
+        <MapContainer center={coordinates} zoom={15} scrollWheelZoom={false}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={latLon}>
+            <Marker position={coordinates}>
                 <Popup>
                     <p className="location__name">{name}</p>
                     <span className="location__address">
