@@ -1,27 +1,26 @@
-/* --- styling --- */
-import "./CategorySection.scss"
+/* --- components --- */
+import Pill from "../Pill/Pill"
 
 /* --- react and react related imports --- */
 import { Link } from "react-router-dom"
 
-/* --- components --- */
-import Pill from "../Pill/Pill"
-
-/* --- data --- */
-import { businessCategories } from "../../data/categoriesList"
-
-/* --- util functions --- */
-import capitalizeWords from "../../utils/capitalizeWords";
+/* --- styling --- */
+import "./CategorySection.scss"
 
 /* --- types --- */
+import { CategoryProps } from "../../data/categoriesList";
 interface CategorySectionProps {
+    categories: CategoryProps[];
     onCategoryClick: (category: string) => void;
     onSortByChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
     selectedCategory?: string | null;
     sortBy: string | null;
 };
 
-export default function CategorySection({ onCategoryClick, onSortByChange, selectedCategory, sortBy }: CategorySectionProps) {
+/* --- util functions --- */
+import capitalizeWords from "../../utils/capitalizeWords";
+
+export default function CategorySection({ categories, onCategoryClick, onSortByChange, selectedCategory, sortBy }: CategorySectionProps) {
     return (
         <section className="category">
             <div className="category__wrapper--row">
@@ -33,7 +32,7 @@ export default function CategorySection({ onCategoryClick, onSortByChange, selec
 
             <div className="category__list-wrapper">                
                 <ul className="category__list">
-                    {businessCategories.map((category) => (
+                    {categories.map((category) => (
                         <li key={category.id} className="category__list-item">
                             <Pill
                                 id={category.id}
