@@ -12,6 +12,7 @@ import FAQsCategoryPage from './pages/FAQsCategoryPage/FAQsCategoryPage'
 import ContactPage from './pages/ContactPage/ContactPage'
 import BusinessPage from './pages/BusinessPage/BusinessPage'
 import BusinessDetailsPage from './pages/BusinessDetailsPage/BusinessDetailsPage'
+import CommunityResourcesPage from './pages/CommunityResourcesPage/CommunityResourcesPage'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/contact" element={ <ContactPage /> } />
           <Route path="/business" element={ <BusinessPage />} />
           <Route path="/business/:id" element={ <BusinessDetailsPage /> } />
+          <Route path="/community-resources" element={ <CommunityResourcesPage /> } /> 
         </Routes>
       </main>
       <Footer />
