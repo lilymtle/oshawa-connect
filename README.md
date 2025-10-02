@@ -16,6 +16,15 @@ _This README is under construction and will be updated periodically._
 ## Updates
 
 <details>
+    <summary>🎃 October 2025</summary>
+    <ul>
+        <li>
+            I've been MIA for the past month due do some other commitments. Also, I'll be overseas this month. My plan is to get back to this project once I return to Canada. ☺️
+        </li>
+    </ul>
+</details>
+
+<details>
     <summary>☀️ August 2025</summary>
         <details>
             <summary>August 27, 2025</summary>
