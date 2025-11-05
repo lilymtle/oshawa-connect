@@ -14,7 +14,18 @@ _This README is under construction and will be updated periodically._
 - 🚧 More features coming soon...
 
 ## Updates
-
+<details>
+    <summary>❄️ November 2025</summary>
+    <details>
+        <summary>November 5, 2025</summary>
+        <ul>
+            <li>
+                I am back in Canada and I am transitioning back into my routine again. I'll have more time to work on this project since my contract with MOH has ended. However, on top of job hunting, I'm also going to be juggling some professional and personal development. I'll need to plan on how I'll organize my time for this project, job hunting, learning, and self-care/hobbies! 😅
+            </li>
+        </ul>
+    </details>
+</details>
+    
 <details>
     <summary>🎃 October 2025</summary>
     <ul>
